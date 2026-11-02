@@ -1,0 +1,46 @@
+# arm-none-eabi-gcc (15:13.2.rel1-2) 13.2.1 20231009
+# arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb -Os -c c/compare.c, then arm-none-eabi-objdump -d --no-show-raw-insn
+
+Disassembly of section .text:
+
+00000000 <cmp_naive>:
+   0:	movs	r3, #0
+   2:	push	{r4, r5, lr}
+   4:	subs	r1, #1
+   6:	uxtb	r4, r3
+   8:	cmp	r2, r4
+   a:	bhi.n	10 <cmp_naive+0x10>
+   c:	movs	r0, #1
+   e:	pop	{r4, r5, pc}
+  10:	ldrb	r4, [r0, r3]
+  12:	adds	r3, #1
+  14:	ldrb	r5, [r1, r3]
+  16:	cmp	r5, r4
+  18:	beq.n	6 <cmp_naive+0x6>
+  1a:	movs	r0, #0
+  1c:	b.n	e <cmp_naive+0xe>
+
+0000001e <cmp_ct>:
+  1e:	movs	r3, #0
+  20:	push	{r4, r5, r6, lr}
+  22:	movs	r4, r0
+  24:	movs	r0, r3
+  26:	uxtb	r5, r3
+  28:	cmp	r2, r5
+  2a:	bhi.n	32 <cmp_ct+0x14>
+  2c:	negs	r3, r0
+  2e:	adcs	r0, r3
+  30:	pop	{r4, r5, r6, pc}
+  32:	ldrb	r5, [r4, r3]
+  34:	ldrb	r6, [r1, r3]
+  36:	adds	r3, #1
+  38:	eors	r5, r6
+  3a:	orrs	r0, r5
+  3c:	b.n	26 <cmp_ct+0x8>
+
+0000003e <cmp_memcmp>:
+  3e:	push	{r4, lr}
+  40:	bl	0 <memcmp>
+  44:	negs	r3, r0
+  46:	adcs	r0, r3
+  48:	pop	{r4, pc}

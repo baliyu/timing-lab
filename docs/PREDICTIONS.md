@@ -23,9 +23,9 @@ It also reports conditional branches that depend on loaded data.
 | P1 | Feather M0, `cmp_naive`: 12 to 20 cycles per matching byte | 12 from the listing with zero wait states; the SAMD21's flash is slower than its 48 MHz core, so wait states are expected (not checked) | outside 12 to 20, or not linear in the position of the first difference |
 | P2 | Feather M0, `cmp_ct`: the cycle count is the same for every data pattern, within 2 cycles; total about 13 per byte plus a fixed overhead | no data-dependent branch; loads are the only data-dependent instructions | a spread above 2 cycles, or a trend with the position of the difference |
 | P3 | Feather M0, `cmp_memcmp`: exits early; 3 to 14 cycles per byte, possibly in steps of 4 bytes if the library compares words | the code is not in the listing; this is a guess to be replaced by reading the real binary | no early exit at all |
-| P4 | Nano 33 BLE, `cmp_naive`: 7 to 10 cycles per matching byte | the M4 pipelines loads and costs a taken branch 2 to 4 cycles; no exact table used | outside 7 to 10 |
+| P4 | Nano 33 BLE, `cmp_naive`: 8 to 11 cycles per matching byte (revised, see below; first written as 7 to 10) | per byte: cmp 1, branch not taken 1, ldrb 2, ldrb 1 to 2 (pipelined), cmp 1, branch taken 2 to 4 | outside 8 to 11 |
 | P5 | Nano, `cmp_ct`: the same count for every data pattern, within 3 cycles | no data-dependent branch; the nRF52840's instruction cache and branch handling are the unknowns | a spread above 3 cycles |
-| P6 | Nano, `cmp_memcmp`: exits early; 2 to 10 cycles per byte | depends on which C library the build links; to be read from the binary | no early exit |
+| P6 | Nano, `cmp_memcmp`: exits early; 10 to 13 cycles per byte (revised, see below; first written as 2 to 10) | the Nano build links a byte loop: cmp, beq, mov, mov, ldrb, ldrb, cmp, beq taken | outside 10 to 13, or no early exit |
 | P7 | The leak is small. For a 4-byte tag, "first byte wrong" against "last byte wrong" differs by about 36 cycles on the Feather (0.75 microseconds at 48 MHz, with zero wait states) and by 21 to 30 cycles on the Nano (about 0.33 to 0.47 microseconds at 64 MHz) | 3 extra bytes times the per-byte cost above | a difference outside these ranges |
 | P8 | A Welch t-test between those two classes gives \|t\| above 4.5 for `cmp_naive` and `cmp_memcmp` and below 4.5 for `cmp_ct`, on both boards. If a class has zero variance the test is undefined and I compare the means directly | the usual threshold for calling a timing difference a leak | `cmp_ct` above 4.5, or `cmp_naive` below it |
 
@@ -33,3 +33,12 @@ It also reports conditional branches that depend on loaded data.
 
 - **The MIC check (`ct_equal` in my secure link) should not leak** (P2, P5, P8). Even a leaky compare could not be timed from the radio: the difference is well under a microsecond, while a LoRa packet takes tens of milliseconds on the air and its timing varies by far more. So this lab is about whether the comparison is right, not about a practical attack on the node.
 - **The bootloader's digest check uses `memcmp`, which exits early (P3, P6), and that is fine.** The attacker supplies both the image and the stored hash and can compute the SHA-256 themselves, so what leaks is a public value, not a secret. A comparison needs to be constant-time only when one side is secret.
+
+## Revision log
+
+Each revision is made before any measurement on a board; the earlier wording is kept in the git history.
+
+- **Revision 1, 2 November 2026.** I built the Nano bench app in my sandbox (Zephyr 4.4.x, GNU Arm 13.2.1) and read the three comparison functions and `memcmp` out of the firmware (`asm/nano_sandbox_gcc13.lst`, made with `tools/dump_functions.sh`).
+  `cmp_naive` and `cmp_ct` are the same loops as in `asm/compare_m4_O2.lst` (checked by a test), so P4 and P5 stand on the same code. The Zephyr build links a byte-by-byte `memcmp` with an early exit, which my first guess for P6 did not allow, so P6 is revised; P4's range is tightened the same way (a taken branch on the M4 costs 2 to 4 cycles).
+  This is my sandbox's compiler, not the one that builds the firmware on my own machine (Zephyr SDK, GCC 14.3.0). The same dump is repeated from my own build before the board is run, and any difference is logged here.
+

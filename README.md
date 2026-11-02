@@ -10,7 +10,7 @@ Built with AI assistance (Claude). I chose the question and the code to test, an
 | Stage | What | State |
 |---|---|---|
 | 1 | The three functions, the compiler listings, a static reader (cycles along a path, branches that depend on data), predictions written before measuring | **done** ([docs/PREDICTIONS.md](docs/PREDICTIONS.md)) |
-| 2 | Read the compare function out of the real firmware builds; bench on the Nano 33 BLE | not started |
+| 2 | Read the compare function out of the real firmware build; bench on the Nano 33 BLE | in progress: bench app and checker written and tested; the board run is next |
 | 3 | Bench on the Feather M0 | not started |
 | 4 | Welch t-test, scorecard against the predictions | not started |
 | 5 | README with results and limits | not started |
@@ -36,10 +36,32 @@ sh tools/make_listings.sh     # needs arm-none-eabi-gcc; rebuilds asm/*.lst
 | `asm/` | the Thumb listings the compiler makes, with the compiler version and flags in the first lines |
 | `python/timing_lab/cycles.py` | cycles along a path (Cortex-M0+ costs), and the check for branches that depend on loaded data |
 | `python/timing_lab/hostlib.py` | builds the C file for the PC so the three functions can be tested for correctness |
-| `tests/` | 34 tests on the code and the listings, plus a by-hand deliberate-bug check |
+| `bench/core/`, `bench/host/`, `bench/zephyr/` | the portable timing core, a PC program with a fake counter for testing it, and the Nano 33 BLE app |
+| `python/timing_lab/check.py` | reads a bench log: slope per byte, spread, Welch t between "first byte differs" and "last byte differs" |
+| `tools/dump_functions.sh` | writes the real machine code of the comparisons out of a built firmware |
+| `tests/` | tests on the code, the listings, the bench core (with a fake counter) and the checker, plus a by-hand deliberate-bug check |
 | `docs/PREDICTIONS.md` | what I expect, written before any measurement |
 
 ## Limits
 
 The listings come from GCC 13.2.1; the boards' builds use other versions and may differ (stage 2 checks this). The cycle costs assume zero wait states and the M0+ costs are not read from the M0+ manual itself.
 The data-dependence check is a one-pass reading aid for short functions, not a proof; it follows values loaded from memory and says nothing about caches or other effects. Host timing is not measured: a PC is not the target.
+
+## Running the Nano bench
+
+WSL, the window where the Zephyr environment is active (`source ~/zephyrproject/.venv/bin/activate`; the prompt shows `(.venv)`):
+
+```
+cd /mnt/c/timing-lab
+export ZEPHYR_BASE=$HOME/zephyrproject/zephyr
+west build -p always -b arduino_nano_33_ble -d ~/timing-bench-build bench/zephyr
+sh tools/dump_functions.sh ~/timing-bench-build/zephyr/zephyr.elf asm/nano_real.lst
+mkdir -p /mnt/c/zephyr_flash && cp ~/timing-bench-build/zephyr/zephyr.bin /mnt/c/zephyr_flash/timing_bench.bin
+```
+
+`nano_real.lst` is the real machine code of your own build; check it against the predictions before flashing. Then flash and capture exactly as in dsp-lab (double-tap RESET, `bossac` on the bootloader port, then a PowerShell capture of about 60 seconds from the app's port to `bench/logs/nano_run1.log`), and read it with:
+
+```
+PYTHONPATH=python python -m timing_lab.check bench/logs/nano_run1.log
+```
+

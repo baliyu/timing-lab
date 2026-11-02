@@ -1,0 +1,67 @@
+# built by: GCC: (15:13.2.rel1-2) 13.2.1 20231009
+# firmware: zephyr.elf, disassembled with GNU objdump (2.42-1ubuntu1+23) 2.42
+00010a60 <cmp_naive>:
+   10a60:	cbz	r2, 10a7c <cmp_naive+0x1c>
+   10a62:	subs	r1, #1
+   10a64:	add	r2, r0
+   10a66:	b.n	10a6c <cmp_naive+0xc>
+   10a68:	cmp	r0, r2
+   10a6a:	beq.n	10a7c <cmp_naive+0x1c>
+   10a6c:	ldrb.w	r3, [r0], #1
+   10a70:	ldrb.w	ip, [r1, #1]!
+   10a74:	cmp	ip, r3
+   10a76:	beq.n	10a68 <cmp_naive+0x8>
+   10a78:	movs	r0, #0
+   10a7a:	bx	lr
+   10a7c:	movs	r0, #1
+   10a7e:	bx	lr
+00010a80 <cmp_ct>:
+   10a80:	cbz	r2, 10aaa <cmp_ct+0x2a>
+   10a82:	push	{lr}
+   10a84:	subs	r1, #1
+   10a86:	add	r2, r0
+   10a88:	mov.w	ip, #0
+   10a8c:	ldrb.w	r3, [r0], #1
+   10a90:	ldrb.w	lr, [r1, #1]!
+   10a94:	cmp	r2, r0
+   10a96:	eor.w	r3, r3, lr
+   10a9a:	orr.w	ip, ip, r3
+   10a9e:	bne.n	10a8c <cmp_ct+0xc>
+   10aa0:	clz	r0, ip
+   10aa4:	lsrs	r0, r0, #5
+   10aa6:	ldr.w	pc, [sp], #4
+   10aaa:	movs	r0, #1
+   10aac:	bx	lr
+00010ab0 <cmp_memcmp>:
+   10ab0:	push	{r3, lr}
+   10ab2:	bl	12e70 <memcmp>
+   10ab6:	clz	r0, r0
+   10aba:	lsrs	r0, r0, #5
+   10abc:	pop	{r3, pc}
+00012e70 <memcmp>:
+   12e70:	cbz	r2, 12e96 <memcmp+0x26>
+   12e72:	subs	r2, #1
+   12e74:	beq.n	12ea4 <memcmp+0x34>
+   12e76:	push	{r4, lr}
+   12e78:	add.w	ip, r0, r2
+   12e7c:	b.n	12e82 <memcmp+0x12>
+   12e7e:	cmp	ip, r0
+   12e80:	beq.n	12e9a <memcmp+0x2a>
+   12e82:	mov	lr, r1
+   12e84:	mov	r4, r0
+   12e86:	ldrb.w	r2, [r1], #1
+   12e8a:	ldrb.w	r3, [r0], #1
+   12e8e:	cmp	r3, r2
+   12e90:	beq.n	12e7e <memcmp+0xe>
+   12e92:	subs	r0, r3, r2
+   12e94:	pop	{r4, pc}
+   12e96:	mov	r0, r2
+   12e98:	bx	lr
+   12e9a:	ldrb	r3, [r4, #1]
+   12e9c:	ldrb.w	r2, [lr, #1]
+   12ea0:	subs	r0, r3, r2
+   12ea2:	pop	{r4, pc}
+   12ea4:	ldrb	r3, [r0, #0]
+   12ea6:	ldrb	r2, [r1, #0]
+   12ea8:	subs	r0, r3, r2
+   12eaa:	bx	lr

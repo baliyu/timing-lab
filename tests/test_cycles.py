@@ -86,3 +86,33 @@ def test_a_compare_and_branch_on_zero_of_loaded_data_is_reported():
 def test_the_flags_set_by_an_arithmetic_instruction_count_too():
     f = cycles.parse("00000000 <f>:\n   0:\tldrb\tr1, [r0, #0]\n   2:\tsubs\tr1, #1\n   4:\tbne.n\t0 <f>\n")["f"]
     assert cycles.analyse(f)[0] == [4]
+
+
+import re
+
+
+def shape(func):
+    """The instruction sequence without addresses or branch targets, ignoring padding nops."""
+    return [(i.mnem, re.sub(r"[0-9a-f]+ <[^>]+>", "T", i.ops)) for i in func if i.mnem != "nop"]
+
+
+NANO = listing("nano_sandbox_gcc13.lst")
+
+
+def test_the_nano_firmware_build_contains_the_three_comparisons_and_the_memcmp_they_may_call():
+    assert set(NANO) == {"cmp_naive", "cmp_ct", "cmp_memcmp", "memcmp"}
+
+
+def test_the_comparisons_in_the_zephyr_build_are_the_same_loops_as_in_the_standalone_m4_listing():
+    assert shape(NANO["cmp_naive"]) == shape(M4["cmp_naive"])
+    assert shape(NANO["cmp_ct"]) == shape(M4["cmp_ct"])
+
+
+def test_the_memcmp_linked_into_the_nano_build_is_a_byte_loop_with_an_early_exit():
+    flagged, calls = cycles.analyse(NANO["memcmp"])
+    assert flagged and calls == []
+    assert sum(1 for i in NANO["memcmp"] if cycles.base(i.mnem) == "ldrb") >= 2          # it reads bytes, not words
+
+
+def test_the_nano_wrapper_calls_the_library_memcmp():
+    assert any("memcmp" in ops for _, ops in cycles.analyse(NANO["cmp_memcmp"])[1])

@@ -1,0 +1,80 @@
+# built by: GCC: (Zephyr SDK 1.0.1) 14.3.0
+# firmware: zephyr.elf, disassembled with GNU objdump (Zephyr SDK 1.0.1) 2.43.1
+00011448 <cmp_naive>:
+   11448:	cbz	r2, 11464 <cmp_naive+0x1c>
+   1144a:	subs	r1, #1
+   1144c:	add	r2, r0
+   1144e:	b.n	11454 <cmp_naive+0xc>
+   11450:	cmp	r0, r2
+   11452:	beq.n	11464 <cmp_naive+0x1c>
+   11454:	ldrb.w	r3, [r0], #1
+   11458:	ldrb.w	ip, [r1, #1]!
+   1145c:	cmp	ip, r3
+   1145e:	beq.n	11450 <cmp_naive+0x8>
+   11460:	movs	r0, #0
+   11462:	bx	lr
+   11464:	movs	r0, #1
+   11466:	bx	lr
+00011468 <cmp_ct>:
+   11468:	cbz	r2, 11492 <cmp_ct+0x2a>
+   1146a:	push	{lr}
+   1146c:	subs	r1, #1
+   1146e:	add	r2, r0
+   11470:	mov.w	ip, #0
+   11474:	ldrb.w	r3, [r0], #1
+   11478:	ldrb.w	lr, [r1, #1]!
+   1147c:	cmp	r2, r0
+   1147e:	eor.w	r3, r3, lr
+   11482:	orr.w	ip, ip, r3
+   11486:	bne.n	11474 <cmp_ct+0xc>
+   11488:	clz	r0, ip
+   1148c:	lsrs	r0, r0, #5
+   1148e:	ldr.w	pc, [sp], #4
+   11492:	movs	r0, #1
+   11494:	bx	lr
+00011498 <cmp_memcmp>:
+   11498:	push	{r3, lr}
+   1149a:	bl	1cbd8 <memcmp>
+   1149e:	clz	r0, r0
+   114a2:	lsrs	r0, r0, #5
+   114a4:	pop	{r3, pc}
+0001cbd8 <memcmp>:
+   1cbd8:	cmp	r2, #3
+   1cbda:	push	{r4, r5}
+   1cbdc:	bls.n	1cc04 <memcmp+0x2c>
+   1cbde:	orr.w	r4, r1, r0
+   1cbe2:	lsls	r4, r4, #30
+   1cbe4:	mov	ip, r0
+   1cbe6:	mov	r3, r1
+   1cbe8:	bne.n	1cc2e <memcmp+0x56>
+   1cbea:	mov	r1, r3
+   1cbec:	mov	r0, ip
+   1cbee:	ldr.w	r4, [r3], #4
+   1cbf2:	ldr.w	r5, [ip], #4
+   1cbf6:	cmp	r5, r4
+   1cbf8:	bne.n	1cc2e <memcmp+0x56>
+   1cbfa:	subs	r2, #4
+   1cbfc:	cmp	r2, #3
+   1cbfe:	bhi.n	1cbea <memcmp+0x12>
+   1cc00:	mov	r0, ip
+   1cc02:	mov	r1, r3
+   1cc04:	subs	r4, r2, #1
+   1cc06:	cbz	r2, 1cc28 <memcmp+0x50>
+   1cc08:	subs	r3, r0, #1
+   1cc0a:	subs	r1, #1
+   1cc0c:	adds	r2, r0, r4
+   1cc0e:	b.n	1cc14 <memcmp+0x3c>
+   1cc10:	cmp	r2, r3
+   1cc12:	beq.n	1cc28 <memcmp+0x50>
+   1cc14:	ldrb.w	r0, [r3, #1]!
+   1cc18:	ldrb.w	ip, [r1, #1]!
+   1cc1c:	cmp	r0, ip
+   1cc1e:	beq.n	1cc10 <memcmp+0x38>
+   1cc20:	sub.w	r0, r0, ip
+   1cc24:	pop	{r4, r5}
+   1cc26:	bx	lr
+   1cc28:	movs	r0, #0
+   1cc2a:	pop	{r4, r5}
+   1cc2c:	bx	lr
+   1cc2e:	subs	r4, r2, #1
+   1cc30:	b.n	1cc08 <memcmp+0x30>

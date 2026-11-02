@@ -10,7 +10,7 @@ Built with AI assistance (Claude). I chose the question and the code to test, an
 | Stage | What | State |
 |---|---|---|
 | 1 | The three functions, the compiler listings, a static reader (cycles along a path, branches that depend on data), predictions written before measuring | **done** ([docs/PREDICTIONS.md](docs/PREDICTIONS.md)) |
-| 2 | Read the compare function out of the real firmware build; bench on the Nano 33 BLE | in progress: bench app and checker written and tested; the board run is next |
+| 2 | Read the compare function out of the real firmware build; bench on the Nano 33 BLE | in progress: bench app and checker written and tested; the real build has been read; the board run is next |
 | 3 | Bench on the Feather M0 | not started |
 | 4 | Welch t-test, scorecard against the predictions | not started |
 | 5 | README with results and limits | not started |

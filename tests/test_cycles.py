@@ -116,3 +116,33 @@ def test_the_memcmp_linked_into_the_nano_build_is_a_byte_loop_with_an_early_exit
 
 def test_the_nano_wrapper_calls_the_library_memcmp():
     assert any("memcmp" in ops for _, ops in cycles.analyse(NANO["cmp_memcmp"])[1])
+
+
+REAL = listing("nano_real.lst")
+
+
+def test_the_listing_from_my_own_build_says_it_was_made_by_the_zephyr_sdk_compiler():
+    head = (ROOT / "asm" / "nano_real.lst").read_text(encoding="utf-8").splitlines()[:2]
+    assert "Zephyr SDK 1.0.1" in head[0] and "14.3.0" in head[0]
+
+
+def test_the_three_comparisons_in_my_own_build_are_the_same_loops_as_in_the_sandbox_build():
+    for name in ("cmp_naive", "cmp_ct", "cmp_memcmp"):
+        assert shape(REAL[name]) == shape(NANO[name]), name
+
+
+def test_in_my_own_build_the_naive_loop_has_a_data_branch_and_the_constant_time_loop_has_none():
+    assert cycles.analyse(REAL["cmp_naive"])[0] and cycles.analyse(REAL["cmp_ct"])[0] == []
+
+
+def test_the_memcmp_in_my_own_build_compares_words_when_both_pointers_are_aligned_and_falls_back_to_bytes():
+    m = REAL["memcmp"]
+    ops = [(i.mnem, i.ops) for i in m]
+    assert any(mn.startswith("ldr.w") and ", #4" in o for mn, o in ops)                 # a post-incremented word load: 4 bytes at a time
+    assert any(mn == "lsls" and "#30" in o for mn, o in ops)                             # the test of the low two address bits of both pointers
+    assert sum(1 for mn, _ in ops if mn.startswith("ldrb")) >= 2                         # and the byte loop
+    assert len(cycles.analyse(m)[0]) >= 2                                                # several branches that depend on the data
+
+
+def test_the_memcmp_in_the_two_builds_is_not_the_same_code():
+    assert shape(REAL["memcmp"]) != shape(NANO["memcmp"])

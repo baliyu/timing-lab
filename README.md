@@ -10,8 +10,8 @@ Built with AI assistance (Claude). I chose the question and the code to test, an
 | Stage | What | State |
 |---|---|---|
 | 1 | The three functions, the compiler listings, a static reader (cycles along a path, branches that depend on data), predictions written before measuring | **done** ([docs/PREDICTIONS.md](docs/PREDICTIONS.md)) |
-| 2 | Read the compare function out of the real firmware build; bench on the Nano 33 BLE | in progress: bench app and checker written and tested; the real build has been read; the board run is next |
-| 3 | Bench on the Feather M0 | not started |
+| 2 | Read the compare function out of the real firmware build; bench on the Nano 33 BLE | **done** ([docs/SCORECARD.md](docs/SCORECARD.md)): every Nano prediction inside its range |
+| 3 | Bench on the Feather M0 (predictions P1 to P3 still to be tested) | not started |
 | 4 | Welch t-test, scorecard against the predictions | not started |
 | 5 | README with results and limits | not started |
 
@@ -19,6 +19,11 @@ Built with AI assistance (Claude). I chose the question and the code to test, an
 
 On the compiler output for both cores, the early-exit loop has a branch that depends on the data and my secure link's loop has none. A matching byte costs 12 cycles in the early-exit loop on a Cortex-M0+ (zero wait states); one pass of the constant-time loop costs 13 whatever the bytes are.
 These are readings of code, not measurements: nothing has run on a board yet.
+
+## What the Nano run showed
+
+On the Nano 33 BLE my secure link's `ct_equal` takes exactly the same number of cycles for every input (86 for a 4-byte tag); the early-exit loop leaks 8 cycles per matching byte and the library `memcmp` leaks in a staircase. Every prediction for the Nano landed inside its range ([docs/SCORECARD.md](docs/SCORECARD.md)).
+These are cycle counts with interrupts masked, not a statement about what an attacker could measure.
 
 ## Use
 

@@ -146,3 +146,34 @@ def test_the_memcmp_in_my_own_build_compares_words_when_both_pointers_are_aligne
 
 def test_the_memcmp_in_the_two_builds_is_not_the_same_code():
     assert shape(REAL["memcmp"]) != shape(NANO["memcmp"])
+
+
+FEATHER = listing("feather_real.lst")
+
+
+def test_the_feather_listing_says_it_was_made_by_the_arm_9_2019_q4_toolchain():
+    head = (ROOT / "asm" / "feather_real.lst").read_text(encoding="utf-8").splitlines()[:2]
+    assert "9.2.1" in head[0] and "9-2019-q4" in head[0]
+
+
+def test_the_feather_build_has_the_three_comparisons_and_the_library_memcmp():
+    assert set(FEATHER) == {"cmp_naive", "cmp_ct", "cmp_memcmp", "memcmp"}
+
+
+def test_on_the_feather_naive_and_memcmp_wrapper_are_the_same_code_as_my_sandbox_m0plus_listing_and_ct_is_not_but_has_no_data_branch():
+    assert shape(FEATHER["cmp_naive"]) == shape(M0["cmp_naive"]) and shape(FEATHER["cmp_memcmp"]) == shape(M0["cmp_memcmp"])
+    assert shape(FEATHER["cmp_ct"]) != shape(M0["cmp_ct"])
+    assert cycles.analyse(FEATHER["cmp_naive"])[0] and cycles.analyse(FEATHER["cmp_ct"])[0] == []
+
+
+def test_the_feather_loops_cost_12_13_and_11_cycles_per_byte_with_zero_wait_states():
+    assert cycles.path_cycles(FEATHER["cmp_naive"], [0x2102, 0x2104, 0x2106, 0x210C, 0x210E, 0x2110, 0x2112, 0x2114], taken={0x2106, 0x2114}) == 12
+    assert cycles.path_cycles(FEATHER["cmp_ct"], [0x2120, 0x2122, 0x2124, 0x212C, 0x212E, 0x2130, 0x2132, 0x2134, 0x2136], taken={0x2124}) == 13
+    assert cycles.path_cycles(FEATHER["memcmp"], [0x4AE6, 0x4AE8, 0x4AEE, 0x4AF0, 0x4AF2, 0x4AF4, 0x4AF6], taken={0x4AE8, 0x4AF6}) == 11
+
+
+def test_the_memcmp_in_the_feather_toolchain_is_a_plain_byte_loop_with_an_early_exit_and_no_word_path():
+    ops = [(i.mnem, i.ops) for i in FEATHER["memcmp"]]
+    assert sum(1 for mn, _ in ops if mn.startswith("ldrb")) == 2
+    assert not any(mn.startswith("ldr") and not mn.startswith("ldrb") for mn, _ in ops)
+    assert cycles.analyse(FEATHER["memcmp"])[0] == [0x4AF6]

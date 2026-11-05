@@ -11,7 +11,7 @@ Built with AI assistance (Claude). I chose the question and the code to test, an
 |---|---|---|
 | 1 | The three functions, the compiler listings, a static reader (cycles along a path, branches that depend on data), predictions written before measuring | **done** ([docs/PREDICTIONS.md](docs/PREDICTIONS.md)) |
 | 2 | Read the compare function out of the real firmware build; bench on the Nano 33 BLE | **done** ([docs/SCORECARD.md](docs/SCORECARD.md)): every Nano prediction inside its range |
-| 3 | Bench on the Feather M0 (predictions P1 to P3 still to be tested) | in progress: sketch written, compiled against the Feather M0 core and tested; the real build is read next, then the board run |
+| 3 | Bench on the Feather M0 (predictions P1 to P3 still to be tested) | in progress: sketch written and tested, real build read (predictions revised before measuring); the board run is next |
 | 4 | Welch t-test, scorecard against the predictions | not started |
 | 5 | README with results and limits | not started |
 

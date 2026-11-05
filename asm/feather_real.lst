@@ -1,0 +1,55 @@
+# built by: GCC: (GNU Tools for Arm Embedded Processors 9-2019-q4-major) 9.2.1 20191025 (release) [ARM/arm-9-branch revision 277599]
+# firmware: timing_bench_feather.ino.elf, disassembled with GNU objdump (GNU Tools for Arm Embedded Processors 9-2019-q4-major) 2.33.1.20191025
+000020fc <cmp_naive>:
+    20fc:	movs	r3, #0
+    20fe:	push	{r4, r5, lr}
+    2100:	subs	r1, #1
+    2102:	uxtb	r4, r3
+    2104:	cmp	r2, r4
+    2106:	bhi.n	210c <cmp_naive+0x10>
+    2108:	movs	r0, #1
+    210a:	pop	{r4, r5, pc}
+    210c:	ldrb	r4, [r0, r3]
+    210e:	adds	r3, #1
+    2110:	ldrb	r5, [r1, r3]
+    2112:	cmp	r5, r4
+    2114:	beq.n	2102 <cmp_naive+0x6>
+    2116:	movs	r0, #0
+    2118:	b.n	210a <cmp_naive+0xe>
+0000211a <cmp_ct>:
+    211a:	movs	r3, #0
+    211c:	push	{r4, r5, r6, lr}
+    211e:	movs	r4, r3
+    2120:	uxtb	r5, r3
+    2122:	cmp	r2, r5
+    2124:	bhi.n	212c <cmp_ct+0x12>
+    2126:	negs	r0, r4
+    2128:	adcs	r0, r4
+    212a:	pop	{r4, r5, r6, pc}
+    212c:	ldrb	r5, [r0, r3]
+    212e:	ldrb	r6, [r1, r3]
+    2130:	adds	r3, #1
+    2132:	eors	r5, r6
+    2134:	orrs	r4, r5
+    2136:	b.n	2120 <cmp_ct+0x6>
+00002138 <cmp_memcmp>:
+    2138:	push	{r4, lr}
+    213a:	bl	4ae0 <memcmp>
+    213e:	negs	r3, r0
+    2140:	adcs	r0, r3
+    2142:	pop	{r4, pc}
+00004ae0 <memcmp>:
+    4ae0:	push	{r4, r5, lr}
+    4ae2:	movs	r4, #0
+    4ae4:	subs	r1, #1
+    4ae6:	cmp	r2, r4
+    4ae8:	bne.n	4aee <memcmp+0xe>
+    4aea:	movs	r0, #0
+    4aec:	b.n	4afa <memcmp+0x1a>
+    4aee:	ldrb	r3, [r0, r4]
+    4af0:	adds	r4, #1
+    4af2:	ldrb	r5, [r1, r4]
+    4af4:	cmp	r3, r5
+    4af6:	beq.n	4ae6 <memcmp+0x6>
+    4af8:	subs	r0, r3, r5
+    4afa:	pop	{r4, r5, pc}

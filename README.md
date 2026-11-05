@@ -11,18 +11,25 @@ Built with AI assistance (Claude). I chose the question and the code to test, an
 |---|---|---|
 | 1 | The three functions, the compiler listings, a static reader (cycles along a path, branches that depend on data), predictions written before measuring | **done** ([docs/PREDICTIONS.md](docs/PREDICTIONS.md)) |
 | 2 | Read the compare function out of the real firmware build; bench on the Nano 33 BLE | **done** ([docs/SCORECARD.md](docs/SCORECARD.md)): every Nano prediction inside its range |
-| 3 | Bench on the Feather M0 (predictions P1 to P3 still to be tested) | in progress: sketch written and tested, real build read (predictions revised before measuring); the board run is next |
-| 4 | Welch t-test, scorecard against the predictions | not started |
-| 5 | README with results and limits | not started |
+| 3 | Bench on the Feather M0 (predictions P1 to P3 still to be tested) | **done**: every Feather prediction inside its range except two one-cycle misses ([docs/SCORECARD.md](docs/SCORECARD.md)) |
+| 4 | Welch t-test, scorecard against the predictions | **done** (`check.py`, [docs/SCORECARD.md](docs/SCORECARD.md)) |
+| 5 | README with results and limits | **done** (this page) |
 
 ## What stage 1 shows
 
 On the compiler output for both cores, the early-exit loop has a branch that depends on the data and my secure link's loop has none. A matching byte costs 12 cycles in the early-exit loop on a Cortex-M0+ (zero wait states); one pass of the constant-time loop costs 13 whatever the bytes are.
 These are readings of code, not measurements: nothing has run on a board yet.
 
-## What the Nano run showed
+## What the two runs showed
 
-On the Nano 33 BLE my secure link's `ct_equal` takes exactly the same number of cycles for every input (86 for a 4-byte tag); the early-exit loop leaks 8 cycles per matching byte and the library `memcmp` leaks in a staircase. Every prediction for the Nano landed inside its range ([docs/SCORECARD.md](docs/SCORECARD.md)).
+| Cycles per byte | Nano 33 BLE (Cortex-M4F) | Feather M0 (Cortex-M0+) |
+|---|---|---|
+| `cmp_ct`, my secure link's `ct_equal` | 8, the same for every input | 13, the same for every input |
+| `cmp_naive`, per matching byte | 8 | 12 |
+| `cmp_memcmp`, the library | a staircase: 11 per four-byte word, 8 per byte inside it | linear: 11 per byte |
+
+My secure link's comparison takes exactly the same time for every input on both boards; the early-exit loop and the library `memcmp` leak, and the library's behaviour differs between the boards because the toolchain's `memcmp` differs.
+Of the predictions I wrote before each run, all landed inside their ranges except two spreads on the Feather that missed by one cycle each; every revision I made along the way, and why, is in [docs/PREDICTIONS.md](docs/PREDICTIONS.md) and [docs/SCORECARD.md](docs/SCORECARD.md).
 These are cycle counts with interrupts masked, not a statement about what an attacker could measure.
 
 ## Use
@@ -50,7 +57,7 @@ sh tools/make_listings.sh     # needs arm-none-eabi-gcc; rebuilds asm/*.lst
 
 ## Limits
 
-The listings come from GCC 13.2.1; the boards' builds use other versions and may differ (stage 2 checks this). The cycle costs assume zero wait states and the M0+ costs are not read from the M0+ manual itself.
+The standalone listings come from GCC 13.2.1; the boards' builds use other versions (Zephyr SDK 14.3.0, Arduino 9.2.1), so the predictions were checked against the code in each real build (`asm/nano_real.lst`, `asm/feather_real.lst`) before the runs. The cycle costs assume zero wait states and the M0+ costs are not read from the M0+ manual itself.
 The data-dependence check is a one-pass reading aid for short functions, not a proof; it follows values loaded from memory and says nothing about caches or other effects. Host timing is not measured: a PC is not the target.
 
 ## Running the Nano bench
@@ -75,4 +82,3 @@ PYTHONPATH=python python -m timing_lab.check bench/logs/nano_run1.log
 
 Arduino IDE 2.x, board "Adafruit Feather M0 (SAMD21)", open the folder `bench/feather/timing_bench_feather`, default optimisation. Sketch > Export Compiled Binary writes the `.elf` under `build/` inside that folder.
 Read the real machine code of the comparisons out of it with the Arduino toolchain's objdump into `asm/feather_real.lst` (PowerShell commands in the repository's notes for this stage) and check it against the predictions before flashing. Then upload from the IDE, capture about 60 seconds from the Feather's port to `bench/logs/feather_run1.log` as for the Nano, and read it with `python -m timing_lab.check`.
-

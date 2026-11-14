@@ -13,6 +13,11 @@
 #include "compare.h"
 #include "timing_core.h"
 
+/* Both comparison buffers are moved up by this many bytes (0 to 3). Keep it 0 in the repository: set it to 1 only for an unaligned run, and the log says which. */
+#ifndef TIMING_OFFSET
+#define TIMING_OFFSET 0
+#endif
+
 #define REPEATS 1000u
 #define PAUSE_BETWEEN_RUNS_S 10
 
@@ -113,8 +118,9 @@ int main(void)
 		printk("ENV cpu_hz_measured %u\n", (unsigned)measure_cpu_hz());
 		printk("ENV timer_overhead_min_cycles %u\n", (unsigned)timer_overhead_min());
 		printk("ENV reps %u\n", REPEATS);
+		printk("ENV offset_bytes %u\n", (unsigned)TIMING_OFFSET);
 		run++;
-		(void)timing_run(&plat, fns, 3, REPEATS, run);
+		(void)timing_run_off(&plat, fns, 3, REPEATS, run, TIMING_OFFSET);
 		k_sleep(K_SECONDS(PAUSE_BETWEEN_RUNS_S));
 	}
 	return 0;

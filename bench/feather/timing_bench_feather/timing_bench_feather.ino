@@ -13,6 +13,11 @@
 extern "C" {
 #include "compare.h"
 #include "timing_core.h"
+
+/* Both comparison buffers are moved up by this many bytes (0 to 3). Keep it 0 in the repository: set it to 1 only for an unaligned run, and the log says which. */
+#ifndef TIMING_OFFSET
+#define TIMING_OFFSET 0
+#endif
 }
 
 #define REPEATS 1000u
@@ -115,7 +120,8 @@ void loop(void)
     Serial.print("ENV arduino_define "); Serial.println((unsigned long)ARDUINO);
     Serial.print("ENV timer_overhead_min_cycles "); Serial.println((unsigned long)timer_overhead_min());
     Serial.print("ENV reps "); Serial.println((unsigned long)REPEATS);
+    Serial.print("ENV offset_bytes "); Serial.println((unsigned long)TIMING_OFFSET);
     run++;
-    (void)timing_run(&plat, fns, 3, REPEATS, run);
+    (void)timing_run_off(&plat, fns, 3, REPEATS, run, TIMING_OFFSET);
     delay(PAUSE_BETWEEN_RUNS_MS);
 }

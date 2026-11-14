@@ -24,4 +24,8 @@ extern const uint8_t timing_lengths[TIMING_NLENGTHS];   /* 4 (a MIC), 16, 32 (a 
    Returns the number of calls that gave the wrong answer (it should be 0). */
 unsigned timing_run(const timing_platform_t *plat, const timing_fn_t *fns, unsigned nfns, unsigned reps, unsigned run_index);
 
+/* The same, with both buffers moved up by off bytes (0 to 3), so the pointers are no longer 4-byte aligned. timing_run is off = 0.
+   An off above 3 runs nothing and returns 0xFFFFFFFF. */
+unsigned timing_run_off(const timing_platform_t *plat, const timing_fn_t *fns, unsigned nfns, unsigned reps, unsigned run_index, unsigned off);
+
 #endif

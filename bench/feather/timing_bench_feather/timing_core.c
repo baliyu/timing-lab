@@ -5,8 +5,8 @@ const uint8_t timing_lengths[TIMING_NLENGTHS] = {4, 16, 32};
 
 #define WARMUP_CALLS 8u
 
-static uint8_t buf_a[TIMING_MAX_N] __attribute__((aligned(4)));
-static uint8_t buf_b[TIMING_MAX_N] __attribute__((aligned(4)));
+static uint8_t buf_a[TIMING_MAX_N + 4u] __attribute__((aligned(4)));
+static uint8_t buf_b[TIMING_MAX_N + 4u] __attribute__((aligned(4)));
 
 /* ---- tiny text helpers: no printf, so the same lines come out on every board and every C library ---- */
 typedef struct { char s[160]; unsigned n; } line_t;
@@ -24,14 +24,18 @@ static void put_u64(line_t *l, uint64_t v)
 
 static void put_field(line_t *l, uint64_t v) { put_s(l, ","); put_u64(l, v); }
 
-unsigned timing_run(const timing_platform_t *plat, const timing_fn_t *fns, unsigned nfns, unsigned reps, unsigned run_index)
+unsigned timing_run_off(const timing_platform_t *plat, const timing_fn_t *fns, unsigned nfns, unsigned reps, unsigned run_index, unsigned off)
 {
   unsigned total_errors = 0;
   line_t l;
   unsigned f, li, i;
   uint8_t p;
+  uint8_t *a, *b;
 
-  for (i = 0; i < TIMING_MAX_N; i++) buf_a[i] = (uint8_t)(0x5D + 37u * i);
+  if (off > 3u) return 0xFFFFFFFFu;
+  a = buf_a + off; b = buf_b + off;
+
+  for (i = 0; i < TIMING_MAX_N; i++) a[i] = (uint8_t)(0x5D + 37u * i);
 
   l.n = 0; put_s(&l, "BEGIN run "); put_u64(&l, run_index); plat->emit(l.s);
 
@@ -44,17 +48,17 @@ unsigned timing_run(const timing_platform_t *plat, const timing_fn_t *fns, unsig
         uint64_t sum = 0, sumsq = 0;
         int want = (p == n);
 
-        for (i = 0; i < n; i++) buf_b[i] = buf_a[i];
-        if (p < n) buf_b[p] = (uint8_t)~buf_a[p];
+        for (i = 0; i < n; i++) b[i] = a[i];
+        if (p < n) b[p] = (uint8_t)~a[p];
 
-        for (r = 0; r < WARMUP_CALLS; r++) (void)fns[f].fn(buf_a, buf_b, n);
+        for (r = 0; r < WARMUP_CALLS; r++) (void)fns[f].fn(a, b, n);
 
         for (r = 0; r < reps; r++) {
           uint32_t c0, c1, d;
           int got;
           key = plat->irq_lock();
           c0 = plat->cycles();
-          got = fns[f].fn(buf_a, buf_b, n);
+          got = fns[f].fn(a, b, n);
           c1 = plat->cycles();
           plat->irq_unlock(key);
           d = c1 - c0;
@@ -77,4 +81,9 @@ unsigned timing_run(const timing_platform_t *plat, const timing_fn_t *fns, unsig
 
   l.n = 0; put_s(&l, "END run "); put_u64(&l, run_index); plat->emit(l.s);
   return total_errors;
+}
+
+unsigned timing_run(const timing_platform_t *plat, const timing_fn_t *fns, unsigned nfns, unsigned reps, unsigned run_index)
+{
+  return timing_run_off(plat, fns, nfns, reps, run_index, 0u);
 }

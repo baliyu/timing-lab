@@ -11,14 +11,15 @@ Built with AI assistance (Claude). I chose the question and the code to test, an
 |---|---|---|
 | 1 | The three functions, the compiler listings, a static reader (cycles along a path, branches that depend on data), predictions written before measuring | **done** ([docs/PREDICTIONS.md](docs/PREDICTIONS.md)) |
 | 2 | Read the compare function out of the real firmware build; bench on the Nano 33 BLE | **done** ([docs/SCORECARD.md](docs/SCORECARD.md)): every Nano prediction inside its range |
-| 3 | Bench on the Feather M0 (predictions P1 to P3 still to be tested) | **done**: every Feather prediction inside its range except two one-cycle misses ([docs/SCORECARD.md](docs/SCORECARD.md)) |
+| 3 | Bench on the Feather M0 | **done**: every Feather prediction inside its range except two one-cycle misses ([docs/SCORECARD.md](docs/SCORECARD.md)) |
 | 4 | Welch t-test, scorecard against the predictions | **done** (`check.py`, [docs/SCORECARD.md](docs/SCORECARD.md)) |
 | 5 | README with results and limits | **done** (this page) |
+| 6 | Unaligned buffers: `memcmp` with both pointers one byte off a word boundary, on both boards (P9, P10) | **done** ([docs/SCORECARD.md](docs/SCORECARD.md)): P9 hit, P10 missed by one cycle |
 
 ## What stage 1 shows
 
 On the compiler output for both cores, the early-exit loop has a branch that depends on the data and my secure link's loop has none. A matching byte costs 12 cycles in the early-exit loop on a Cortex-M0+ (zero wait states); one pass of the constant-time loop costs 13 whatever the bytes are.
-These are readings of code, not measurements: nothing has run on a board yet.
+These are readings of code, not measurements: at this stage nothing had run on a board yet.
 
 ## What the two runs showed
 
@@ -55,10 +56,26 @@ sh tools/make_listings.sh     # needs arm-none-eabi-gcc; rebuilds asm/*.lst
 | `tests/` | tests on the code, the listings, the bench core (with a fake counter) and the checker, plus a by-hand deliberate-bug check |
 | `docs/PREDICTIONS.md` | what I expect, written before any measurement |
 
+## Unaligned buffers
+
+I predicted the Nano's library `memcmp` would lose its word path when the buffers start one byte off a word boundary, and that the Feather would not change. Both bench programs take a `TIMING_OFFSET` (0 or 1) and the same buffers are compared at that offset.
+
+| | Aligned (control) | One byte off |
+|---|---|---|
+| Nano 33 BLE, `cmp_memcmp` | staircase: 11 per word, 8 per byte inside it | linear, 8 cycles per byte at every size |
+| Nano, spread over the largest size | 101 cycles (1.6 us at 63.99 MHz) | 248 cycles (3.9 us) |
+| Feather M0, `cmp_memcmp` | linear | linear, no alignment effect; whole build shifted by 1 to 3 cycles |
+
+![Nano memcmp, aligned and one byte off](figures/nano_memcmp_alignment.png)
+![Feather memcmp, aligned and one byte off](figures/feather_memcmp_alignment.png)
+
+On the Nano the data-dependent spread grows by a factor of 2.5 when the buffers are unaligned. P9 (the Nano loses the word path) landed; P10 (the Feather shifts by at most 2 cycles) missed, with a largest shift of 3.00 cycles at n=32, p=8. Method, numbers and the reproduce commands are in [docs/SCORECARD.md](docs/SCORECARD.md).
+
 ## Limits
 
 The standalone listings come from GCC 13.2.1; the boards' builds use other versions (Zephyr SDK 14.3.0, Arduino 9.2.1), so the predictions were checked against the code in each real build (`asm/nano_real.lst`, `asm/feather_real.lst`) before the runs. The cycle costs assume zero wait states and the M0+ costs are not read from the M0+ manual itself.
 The data-dependence check is a one-pass reading aid for short functions, not a proof; it follows values loaded from memory and says nothing about caches or other effects. Host timing is not measured: a PC is not the target.
+Only offsets 0 and 1 were tested, and I did not find the cause of the 1 to 3 cycle shift on the Feather or of the roughly 9 cycle shift between two Nano builds. `align_compare.py --png` needs at least two sizes of `cmp_memcmp` in the logs (with one it fails).
 
 ## Running the Nano bench
 

@@ -179,6 +179,8 @@ Discarded input sections
  .text          0x00000000        0x0 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_core.c.o
  .data          0x00000000        0x0 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_core.c.o
  .bss           0x00000000        0x0 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_core.c.o
+ .text.timing_run
+                0x00000000       0x10 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_core.c.o
  .text          0x00000000        0x0 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\core\variant.cpp.o
  .data          0x00000000        0x0 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\core\variant.cpp.o
  .bss           0x00000000        0x0 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\core\variant.cpp.o
@@ -798,7 +800,7 @@ END GROUP
 LOAD c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtend.o
 LOAD c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtn.o
 
-.text           0x00002000     0x3374
+.text           0x00002000     0x33c0
                 0x00002000                __text_start__ = .
  *(.sketch_boot)
                 0x00002000                . = ALIGN (0x2000)
@@ -827,487 +829,487 @@ LOAD c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eab
                 0x00002174       0x18 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_bench_feather.ino.cpp.o
  .text.setup    0x0000218c       0xd4 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_bench_feather.ino.cpp.o
                 0x0000218c                setup
- .text.loop     0x00002260      0x11c C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_bench_feather.ino.cpp.o
+ .text.loop     0x00002260      0x130 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_bench_feather.ino.cpp.o
                 0x00002260                loop
- .text.put_s    0x0000237c       0x24 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_core.c.o
- .text.put_u64  0x000023a0       0x6c C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_core.c.o
+ .text.put_s    0x00002390       0x24 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_core.c.o
+ .text.put_u64  0x000023b4       0x6c C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_core.c.o
  .text.put_field
-                0x0000240c       0x20 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_core.c.o
- .text.timing_run
-                0x0000242c      0x1f4 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_core.c.o
-                0x0000242c                timing_run
+                0x00002420       0x20 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_core.c.o
+ .text.timing_run_off
+                0x00002440      0x218 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_core.c.o
+                0x00002440                timing_run_off
  .text.SERCOM0_Handler
-                0x00002620       0x10 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\core\variant.cpp.o
-                0x00002620                SERCOM0_Handler
+                0x00002658       0x10 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\core\variant.cpp.o
+                0x00002658                SERCOM0_Handler
  .text.SERCOM5_Handler
-                0x00002630       0x10 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\core\variant.cpp.o
-                0x00002630                SERCOM5_Handler
+                0x00002668       0x10 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\core\variant.cpp.o
+                0x00002668                SERCOM5_Handler
  .text.startup._GLOBAL__sub_I_g_APinDescription
-                0x00002640       0x94 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\core\variant.cpp.o
+                0x00002678       0x94 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\core\variant.cpp.o
  .text._ZN5Print5writeEPKhj
-                0x000026d4       0x24 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Print.cpp.o)
-                0x000026d4                Print::write(unsigned char const*, unsigned int)
+                0x0000270c       0x24 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Print.cpp.o)
+                0x0000270c                Print::write(unsigned char const*, unsigned int)
  .text._ZN5Print5writeEPKc
-                0x000026f8       0x1c C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Print.cpp.o)
-                0x000026f8                Print::write(char const*)
+                0x00002730       0x1c C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Print.cpp.o)
+                0x00002730                Print::write(char const*)
  .text._ZN5Print5printEPKc
-                0x00002714        0x8 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Print.cpp.o)
-                0x00002714                Print::print(char const*)
+                0x0000274c        0x8 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Print.cpp.o)
+                0x0000274c                Print::print(char const*)
  .text._ZN5Print7printlnEv
-                0x0000271c       0x10 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Print.cpp.o)
-                0x0000271c                Print::println()
+                0x00002754       0x10 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Print.cpp.o)
+                0x00002754                Print::println()
  .text._ZN5Print7printlnEPKc
-                0x0000272c       0x14 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Print.cpp.o)
-                0x0000272c                Print::println(char const*)
+                0x00002764       0x14 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Print.cpp.o)
+                0x00002764                Print::println(char const*)
  .text._ZN5Print11printNumberEmh
-                0x00002740       0x50 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Print.cpp.o)
-                0x00002740                Print::printNumber(unsigned long, unsigned char)
+                0x00002778       0x50 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Print.cpp.o)
+                0x00002778                Print::printNumber(unsigned long, unsigned char)
  .text._ZN5Print5printEmi
-                0x00002790       0x18 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Print.cpp.o)
-                0x00002790                Print::print(unsigned long, int)
+                0x000027c8       0x18 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Print.cpp.o)
+                0x000027c8                Print::print(unsigned long, int)
  .text._ZN5Print7printlnEmi
-                0x000027a8       0x14 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Print.cpp.o)
-                0x000027a8                Print::println(unsigned long, int)
+                0x000027e0       0x14 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Print.cpp.o)
+                0x000027e0                Print::println(unsigned long, int)
  .text._ZN6SERCOMC2EP6Sercom
-                0x000027bc        0xc C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SERCOM.cpp.o)
-                0x000027bc                SERCOM::SERCOM(Sercom*)
-                0x000027bc                SERCOM::SERCOM(Sercom*)
+                0x000027f4        0xc C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SERCOM.cpp.o)
+                0x000027f4                SERCOM::SERCOM(Sercom*)
+                0x000027f4                SERCOM::SERCOM(Sercom*)
  .text._ZN6SERCOM9initFrameE18SercomUartCharSize15SercomDataOrder16SercomParityMode19SercomNumberStopBit
-                0x000027c8       0x3a C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SERCOM.cpp.o)
-                0x000027c8                SERCOM::initFrame(SercomUartCharSize, SercomDataOrder, SercomParityMode, SercomNumberStopBit)
+                0x00002800       0x3a C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SERCOM.cpp.o)
+                0x00002800                SERCOM::initFrame(SercomUartCharSize, SercomDataOrder, SercomParityMode, SercomNumberStopBit)
  .text._ZN6SERCOM8initPadsE15SercomUartTXPad11SercomRXPad
-                0x00002802       0x26 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SERCOM.cpp.o)
-                0x00002802                SERCOM::initPads(SercomUartTXPad, SercomRXPad)
+                0x0000283a       0x26 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SERCOM.cpp.o)
+                0x0000283a                SERCOM::initPads(SercomUartTXPad, SercomRXPad)
  .text._ZN6SERCOM9resetUARTEv
-                0x00002828       0x1a C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SERCOM.cpp.o)
-                0x00002828                SERCOM::resetUART()
+                0x00002860       0x1a C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SERCOM.cpp.o)
+                0x00002860                SERCOM::resetUART()
  .text._ZN6SERCOM10enableUARTEv
-                0x00002842       0x14 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SERCOM.cpp.o)
-                0x00002842                SERCOM::enableUART()
+                0x0000287a       0x14 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SERCOM.cpp.o)
+                0x0000287a                SERCOM::enableUART()
  .text._ZN6SERCOM9flushUARTEv
-                0x00002856       0x10 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SERCOM.cpp.o)
-                0x00002856                SERCOM::flushUART()
+                0x0000288e       0x10 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SERCOM.cpp.o)
+                0x0000288e                SERCOM::flushUART()
  .text._ZN6SERCOM15clearStatusUARTEv
-                0x00002866        0x8 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SERCOM.cpp.o)
-                0x00002866                SERCOM::clearStatusUART()
+                0x0000289e        0x8 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SERCOM.cpp.o)
+                0x0000289e                SERCOM::clearStatusUART()
  .text._ZN6SERCOM17availableDataUARTEv
-                0x0000286e        0xa C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SERCOM.cpp.o)
-                0x0000286e                SERCOM::availableDataUART()
+                0x000028a6        0xa C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SERCOM.cpp.o)
+                0x000028a6                SERCOM::availableDataUART()
  .text._ZN6SERCOM11isUARTErrorEv
-                0x00002878        0x8 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SERCOM.cpp.o)
-                0x00002878                SERCOM::isUARTError()
+                0x000028b0        0x8 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SERCOM.cpp.o)
+                0x000028b0                SERCOM::isUARTError()
  .text._ZN6SERCOM20acknowledgeUARTErrorEv
-                0x00002880        0xe C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SERCOM.cpp.o)
-                0x00002880                SERCOM::acknowledgeUARTError()
+                0x000028b8        0xe C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SERCOM.cpp.o)
+                0x000028b8                SERCOM::acknowledgeUARTError()
  .text._ZN6SERCOM16isFrameErrorUARTEv
-                0x0000288e        0xa C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SERCOM.cpp.o)
-                0x0000288e                SERCOM::isFrameErrorUART()
+                0x000028c6        0xa C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SERCOM.cpp.o)
+                0x000028c6                SERCOM::isFrameErrorUART()
  .text._ZN6SERCOM19clearFrameErrorUARTEv
-                0x00002898        0xc C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SERCOM.cpp.o)
-                0x00002898                SERCOM::clearFrameErrorUART()
+                0x000028d0        0xc C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SERCOM.cpp.o)
+                0x000028d0                SERCOM::clearFrameErrorUART()
  .text._ZN6SERCOM23isDataRegisterEmptyUARTEv
-                0x000028a4        0xa C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SERCOM.cpp.o)
-                0x000028a4                SERCOM::isDataRegisterEmptyUART()
+                0x000028dc        0xa C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SERCOM.cpp.o)
+                0x000028dc                SERCOM::isDataRegisterEmptyUART()
  .text._ZN6SERCOM12readDataUARTEv
-                0x000028ae        0x8 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SERCOM.cpp.o)
-                0x000028ae                SERCOM::readDataUART()
+                0x000028e6        0x8 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SERCOM.cpp.o)
+                0x000028e6                SERCOM::readDataUART()
  .text._ZN6SERCOM13writeDataUARTEh
-                0x000028b6       0x10 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SERCOM.cpp.o)
-                0x000028b6                SERCOM::writeDataUART(unsigned char)
+                0x000028ee       0x10 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SERCOM.cpp.o)
+                0x000028ee                SERCOM::writeDataUART(unsigned char)
  .text._ZN6SERCOM36enableDataRegisterEmptyInterruptUARTEv
-                0x000028c6        0x8 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SERCOM.cpp.o)
-                0x000028c6                SERCOM::enableDataRegisterEmptyInterruptUART()
+                0x000028fe        0x8 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SERCOM.cpp.o)
+                0x000028fe                SERCOM::enableDataRegisterEmptyInterruptUART()
  .text._ZN6SERCOM37disableDataRegisterEmptyInterruptUARTEv
-                0x000028ce        0x8 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SERCOM.cpp.o)
-                0x000028ce                SERCOM::disableDataRegisterEmptyInterruptUART()
- *fill*         0x000028d6        0x2 
+                0x00002906        0x8 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SERCOM.cpp.o)
+                0x00002906                SERCOM::disableDataRegisterEmptyInterruptUART()
+ *fill*         0x0000290e        0x2 
  .text._ZN6SERCOM14getSercomIndexEv
-                0x000028d8       0x5c C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SERCOM.cpp.o)
-                0x000028d8                SERCOM::getSercomIndex()
+                0x00002910       0x5c C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SERCOM.cpp.o)
+                0x00002910                SERCOM::getSercomIndex()
  .text._ZN6SERCOM13initClockNVICEv
-                0x00002934       0xa0 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SERCOM.cpp.o)
-                0x00002934                SERCOM::initClockNVIC()
+                0x0000296c       0xa0 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SERCOM.cpp.o)
+                0x0000296c                SERCOM::initClockNVIC()
  .text._ZN6SERCOM8initUARTE14SercomUartMode20SercomUartSampleRatem
-                0x000029d4       0x64 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SERCOM.cpp.o)
-                0x000029d4                SERCOM::initUART(SercomUartMode, SercomUartSampleRate, unsigned long)
+                0x00002a0c       0x64 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SERCOM.cpp.o)
+                0x00002a0c                SERCOM::initUART(SercomUartMode, SercomUartSampleRate, unsigned long)
  .text._ZN7Serial_17availableForWriteEv
-                0x00002a38        0x4 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(CDC.cpp.o)
-                0x00002a38                Serial_::availableForWrite()
+                0x00002a70        0x4 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(CDC.cpp.o)
+                0x00002a70                Serial_::availableForWrite()
  .text._ZN7Serial_5writeEh
-                0x00002a3c       0x14 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(CDC.cpp.o)
-                0x00002a3c                Serial_::write(unsigned char)
+                0x00002a74       0x14 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(CDC.cpp.o)
+                0x00002a74                Serial_::write(unsigned char)
  .text._ZN7Serial_9availableEv
-                0x00002a50        0xc C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(CDC.cpp.o)
-                0x00002a50                Serial_::available()
+                0x00002a88        0xc C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(CDC.cpp.o)
+                0x00002a88                Serial_::available()
  .text._ZN7Serial_5flushEv
-                0x00002a5c        0xc C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(CDC.cpp.o)
-                0x00002a5c                Serial_::flush()
+                0x00002a94        0xc C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(CDC.cpp.o)
+                0x00002a94                Serial_::flush()
  .text._ZN7Serial_5writeEPKhj
-                0x00002a68       0x2c C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(CDC.cpp.o)
-                0x00002a68                Serial_::write(unsigned char const*, unsigned int)
+                0x00002aa0       0x2c C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(CDC.cpp.o)
+                0x00002aa0                Serial_::write(unsigned char const*, unsigned int)
  .text._ZN7Serial_4peekEv
-                0x00002a94       0x1c C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(CDC.cpp.o)
-                0x00002a94                Serial_::peek()
+                0x00002acc       0x1c C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(CDC.cpp.o)
+                0x00002acc                Serial_::peek()
  .text._ZN7Serial_4readEv
-                0x00002ab0       0x24 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(CDC.cpp.o)
-                0x00002ab0                Serial_::read()
+                0x00002ae8       0x24 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(CDC.cpp.o)
+                0x00002ae8                Serial_::read()
  .text._Z16CDC_GetInterfacePh
-                0x00002ad4       0x1c C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(CDC.cpp.o)
-                0x00002ad4                CDC_GetInterface(unsigned char*)
+                0x00002b0c       0x1c C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(CDC.cpp.o)
+                0x00002b0c                CDC_GetInterface(unsigned char*)
  .text._Z9CDC_SetupR8USBSetup
-                0x00002af0       0x7c C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(CDC.cpp.o)
-                0x00002af0                CDC_Setup(USBSetup&)
+                0x00002b28       0x7c C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(CDC.cpp.o)
+                0x00002b28                CDC_Setup(USBSetup&)
  .text._ZN7Serial_5beginEm
-                0x00002b6c        0x2 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(CDC.cpp.o)
-                0x00002b6c                Serial_::begin(unsigned long)
- *fill*         0x00002b6e        0x2 
+                0x00002ba4        0x2 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(CDC.cpp.o)
+                0x00002ba4                Serial_::begin(unsigned long)
+ *fill*         0x00002ba6        0x2 
  .text._ZN7Serial_cvbEv
-                0x00002b70       0x28 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(CDC.cpp.o)
-                0x00002b70                Serial_::operator bool()
+                0x00002ba8       0x28 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(CDC.cpp.o)
+                0x00002ba8                Serial_::operator bool()
  .text.startup._GLOBAL__sub_I__Z17_CDC_GetInterfacev
-                0x00002b98       0x28 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(CDC.cpp.o)
+                0x00002bd0       0x28 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(CDC.cpp.o)
  .text._ZN26DoubleBufferedEPOutHandler4initEv
-                0x00002bc0        0x2 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
-                0x00002bc0                DoubleBufferedEPOutHandler::init()
+                0x00002bf8        0x2 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+                0x00002bf8                DoubleBufferedEPOutHandler::init()
  .text._ZL5utox8mPc
-                0x00002bc2       0x26 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+                0x00002bfa       0x26 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
  .text._ZN26DoubleBufferedEPOutHandlerD2Ev
-                0x00002be8       0x14 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
-                0x00002be8                DoubleBufferedEPOutHandler::~DoubleBufferedEPOutHandler()
-                0x00002be8                DoubleBufferedEPOutHandler::~DoubleBufferedEPOutHandler()
+                0x00002c20       0x14 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+                0x00002c20                DoubleBufferedEPOutHandler::~DoubleBufferedEPOutHandler()
+                0x00002c20                DoubleBufferedEPOutHandler::~DoubleBufferedEPOutHandler()
  .text._ZN26DoubleBufferedEPOutHandlerD0Ev
-                0x00002bfc       0x12 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
-                0x00002bfc                DoubleBufferedEPOutHandler::~DoubleBufferedEPOutHandler()
- *fill*         0x00002c0e        0x2 
+                0x00002c34       0x12 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+                0x00002c34                DoubleBufferedEPOutHandler::~DoubleBufferedEPOutHandler()
+ *fill*         0x00002c46        0x2 
  .text._ZN14USBDeviceClass6initEPEmm.part.0
-                0x00002c10       0xe8 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+                0x00002c48       0xe8 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
  .text._ZN7__GuardC2Ev
-                0x00002cf8        0xe C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
-                0x00002cf8                __Guard::__Guard()
-                0x00002cf8                __Guard::__Guard()
+                0x00002d30        0xe C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+                0x00002d30                __Guard::__Guard()
+                0x00002d30                __Guard::__Guard()
  .text._ZN7__GuardD2Ev
-                0x00002d06        0xe C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
-                0x00002d06                __Guard::~__Guard()
-                0x00002d06                __Guard::~__Guard()
+                0x00002d3e        0xe C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+                0x00002d3e                __Guard::~__Guard()
+                0x00002d3e                __Guard::~__Guard()
  .text._ZNK26DoubleBufferedEPOutHandler9availableEv
-                0x00002d14       0x5e C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
-                0x00002d14                DoubleBufferedEPOutHandler::available() const
- *fill*         0x00002d72        0x2 
+                0x00002d4c       0x5e C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+                0x00002d4c                DoubleBufferedEPOutHandler::available() const
+ *fill*         0x00002daa        0x2 
  .text._ZN26DoubleBufferedEPOutHandler7releaseEv
-                0x00002d74       0x54 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
-                0x00002d74                DoubleBufferedEPOutHandler::release()
+                0x00002dac       0x54 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+                0x00002dac                DoubleBufferedEPOutHandler::release()
  .text._ZN26DoubleBufferedEPOutHandler4recvEPvm
-                0x00002dc8      0x11a C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
-                0x00002dc8                DoubleBufferedEPOutHandler::recv(void*, unsigned long)
+                0x00002e00      0x11a C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+                0x00002e00                DoubleBufferedEPOutHandler::recv(void*, unsigned long)
  .text._ZN26DoubleBufferedEPOutHandler14handleEndpointEv
-                0x00002ee2       0xc2 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
-                0x00002ee2                DoubleBufferedEPOutHandler::handleEndpoint()
+                0x00002f1a       0xc2 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+                0x00002f1a                DoubleBufferedEPOutHandler::handleEndpoint()
  .text._ZN14USBDeviceClass14SendInterfacesEPm
-                0x00002fa4       0x2e C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
-                0x00002fa4                USBDeviceClass::SendInterfaces(unsigned long*)
- *fill*         0x00002fd2        0x2 
+                0x00002fdc       0x2e C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+                0x00002fdc                USBDeviceClass::SendInterfaces(unsigned long*)
+ *fill*         0x0000300a        0x2 
  .text._ZN14USBDeviceClass14handleEndpointEh
-                0x00002fd4       0x44 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
-                0x00002fd4                USBDeviceClass::handleEndpoint(unsigned char)
+                0x0000300c       0x44 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+                0x0000300c                USBDeviceClass::handleEndpoint(unsigned char)
  .text._ZN14USBDeviceClass4initEv
-                0x00003018       0xf0 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
-                0x00003018                USBDeviceClass::init()
+                0x00003050       0xf0 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+                0x00003050                USBDeviceClass::init()
  .text._ZN14USBDeviceClass6attachEv
-                0x00003108       0x34 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
-                0x00003108                USBDeviceClass::attach()
+                0x00003140       0x34 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+                0x00003140                USBDeviceClass::attach()
  .text._ZN14USBDeviceClass10setAddressEm
-                0x0000313c       0x44 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
-                0x0000313c                USBDeviceClass::setAddress(unsigned long)
+                0x00003174       0x44 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+                0x00003174                USBDeviceClass::setAddress(unsigned long)
  .text._ZN14USBDeviceClass25handleClassInterfaceSetupER8USBSetup
-                0x00003180       0x44 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
-                0x00003180                USBDeviceClass::handleClassInterfaceSetup(USBSetup&)
+                0x000031b8       0x44 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+                0x000031b8                USBDeviceClass::handleClassInterfaceSetup(USBSetup&)
  .text._ZN14USBDeviceClass6initEPEmm
-                0x000031c4       0xec C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
-                0x000031c4                USBDeviceClass::initEP(unsigned long, unsigned long)
+                0x000031fc       0xec C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+                0x000031fc                USBDeviceClass::initEP(unsigned long, unsigned long)
  .text._ZN14USBDeviceClass13initEndpointsEv
-                0x000032b0       0x24 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
-                0x000032b0                USBDeviceClass::initEndpoints()
+                0x000032e8       0x24 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+                0x000032e8                USBDeviceClass::initEndpoints()
  .text._ZN14USBDeviceClass9availableEm
-                0x000032d4       0x2c C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
-                0x000032d4                USBDeviceClass::available(unsigned long)
+                0x0000330c       0x2c C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+                0x0000330c                USBDeviceClass::available(unsigned long)
  .text._ZN14USBDeviceClass5flushEm
-                0x00003300       0x2c C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
-                0x00003300                USBDeviceClass::flush(unsigned long)
+                0x00003338       0x2c C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+                0x00003338                USBDeviceClass::flush(unsigned long)
  .text._ZN14USBDeviceClass14armRecvCtrlOUTEm
-                0x0000332c       0x5c C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
-                0x0000332c                USBDeviceClass::armRecvCtrlOUT(unsigned long)
+                0x00003364       0x5c C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+                0x00003364                USBDeviceClass::armRecvCtrlOUT(unsigned long)
  .text._ZN14USBDeviceClass11recvControlEPvm
-                0x00003388       0x3c C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
-                0x00003388                USBDeviceClass::recvControl(void*, unsigned long)
+                0x000033c0       0x3c C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+                0x000033c0                USBDeviceClass::recvControl(void*, unsigned long)
  .text._ZN14USBDeviceClass7armRecvEm
-                0x000033c4       0x38 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
-                0x000033c4                USBDeviceClass::armRecv(unsigned long)
+                0x000033fc       0x38 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+                0x000033fc                USBDeviceClass::armRecv(unsigned long)
  .text._ZN14USBDeviceClass4recvEmPvm
-                0x000033fc       0xd8 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
-                0x000033fc                USBDeviceClass::recv(unsigned long, void*, unsigned long)
+                0x00003434       0xd8 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+                0x00003434                USBDeviceClass::recv(unsigned long, void*, unsigned long)
  .text._ZN14USBDeviceClass4recvEm
-                0x000034d4       0x1c C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
-                0x000034d4                USBDeviceClass::recv(unsigned long)
+                0x0000350c       0x1c C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+                0x0000350c                USBDeviceClass::recv(unsigned long)
  .text._ZN14USBDeviceClass4sendEmPKvm
-                0x000034f0      0x110 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
-                0x000034f0                USBDeviceClass::send(unsigned long, void const*, unsigned long)
+                0x00003528      0x110 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+                0x00003528                USBDeviceClass::send(unsigned long, void const*, unsigned long)
  .text._ZN14USBDeviceClass7armSendEmPKvm
-                0x00003600       0x48 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
-                0x00003600                USBDeviceClass::armSend(unsigned long, void const*, unsigned long)
+                0x00003638       0x48 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+                0x00003638                USBDeviceClass::armSend(unsigned long, void const*, unsigned long)
  .text._ZN14USBDeviceClass11sendControlEPKvm
-                0x00003648       0x54 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
-                0x00003648                USBDeviceClass::sendControl(void const*, unsigned long)
+                0x00003680       0x54 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+                0x00003680                USBDeviceClass::sendControl(void const*, unsigned long)
  .text._ZN14USBDeviceClass20sendStringDescriptorEPKhm
-                0x0000369c       0x64 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
-                0x0000369c                USBDeviceClass::sendStringDescriptor(unsigned char const*, unsigned long)
+                0x000036d4       0x64 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+                0x000036d4                USBDeviceClass::sendStringDescriptor(unsigned char const*, unsigned long)
  .text._ZN14USBDeviceClass17sendConfigurationEm
-                0x00003700       0x80 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
-                0x00003700                USBDeviceClass::sendConfiguration(unsigned long)
+                0x00003738       0x80 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+                0x00003738                USBDeviceClass::sendConfiguration(unsigned long)
  .text._ZN14USBDeviceClass14sendDescriptorER8USBSetup
-                0x00003780       0xe4 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
-                0x00003780                USBDeviceClass::sendDescriptor(USBSetup&)
+                0x000037b8       0xe4 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+                0x000037b8                USBDeviceClass::sendDescriptor(USBSetup&)
  .text._ZN14USBDeviceClass19handleStandardSetupER8USBSetup
-                0x00003864      0x118 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
-                0x00003864                USBDeviceClass::handleStandardSetup(USBSetup&)
+                0x0000389c      0x118 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+                0x0000389c                USBDeviceClass::handleStandardSetup(USBSetup&)
  .text._ZN14USBDeviceClass10ISRHandlerEv
-                0x0000397c      0x150 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
-                0x0000397c                USBDeviceClass::ISRHandler()
+                0x000039b4      0x150 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+                0x000039b4                USBDeviceClass::ISRHandler()
  .text.UDD_Handler
-                0x00003acc       0x10 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
-                0x00003acc                UDD_Handler
+                0x00003b04       0x10 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+                0x00003b04                UDD_Handler
  .text.startup._GLOBAL__sub_I_usbd
-                0x00003adc       0x10 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+                0x00003b14       0x10 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
  .text._ZN4UartcvbEv
-                0x00003aec        0x4 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Uart.cpp.o)
-                0x00003aec                Uart::operator bool()
+                0x00003b24        0x4 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Uart.cpp.o)
+                0x00003b24                Uart::operator bool()
  .text._ZN4Uart5beginEm
-                0x00003af0       0x10 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Uart.cpp.o)
-                0x00003af0                Uart::begin(unsigned long)
+                0x00003b28       0x10 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Uart.cpp.o)
+                0x00003b28                Uart::begin(unsigned long)
  .text._ZN4Uart4peekEv
-                0x00003b00       0x1a C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Uart.cpp.o)
-                0x00003b00                Uart::peek()
+                0x00003b38       0x1a C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Uart.cpp.o)
+                0x00003b38                Uart::peek()
  .text._ZN4Uart3endEv
-                0x00003b1a       0x20 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Uart.cpp.o)
-                0x00003b1a                Uart::end()
+                0x00003b52       0x20 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Uart.cpp.o)
+                0x00003b52                Uart::end()
  .text._ZN4Uart15extractCharSizeEt
-                0x00003b3a       0x28 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Uart.cpp.o)
-                0x00003b3a                Uart::extractCharSize(unsigned short)
+                0x00003b72       0x28 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Uart.cpp.o)
+                0x00003b72                Uart::extractCharSize(unsigned short)
  .text._ZN4Uart13extractParityEt
-                0x00003b62       0x14 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Uart.cpp.o)
-                0x00003b62                Uart::extractParity(unsigned short)
- *fill*         0x00003b76        0x2 
+                0x00003b9a       0x14 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Uart.cpp.o)
+                0x00003b9a                Uart::extractParity(unsigned short)
+ *fill*         0x00003bae        0x2 
  .text._ZN4Uart5beginEmt
-                0x00003b78       0xf8 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Uart.cpp.o)
-                0x00003b78                Uart::begin(unsigned long, unsigned short)
+                0x00003bb0       0xf8 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Uart.cpp.o)
+                0x00003bb0                Uart::begin(unsigned long, unsigned short)
  .text._ZN11RingBufferNILi350EEC2Ev
-                0x00003c70       0x1c C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Uart.cpp.o)
-                0x00003c70                RingBufferN<350>::RingBufferN()
-                0x00003c70                RingBufferN<350>::RingBufferN()
+                0x00003ca8       0x1c C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Uart.cpp.o)
+                0x00003ca8                RingBufferN<350>::RingBufferN()
+                0x00003ca8                RingBufferN<350>::RingBufferN()
  .text._ZN4UartC2EP6SERCOMhh11SercomRXPad15SercomUartTXPad
-                0x00003c8c       0x70 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Uart.cpp.o)
-                0x00003c8c                Uart::Uart(SERCOM*, unsigned char, unsigned char, SercomRXPad, SercomUartTXPad)
-                0x00003c8c                Uart::Uart(SERCOM*, unsigned char, unsigned char, SercomRXPad, SercomUartTXPad)
+                0x00003cc4       0x70 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Uart.cpp.o)
+                0x00003cc4                Uart::Uart(SERCOM*, unsigned char, unsigned char, SercomRXPad, SercomUartTXPad)
+                0x00003cc4                Uart::Uart(SERCOM*, unsigned char, unsigned char, SercomRXPad, SercomUartTXPad)
  .text._ZN11RingBufferNILi350EE9availableEv
-                0x00003cfc       0x12 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Uart.cpp.o)
-                0x00003cfc                RingBufferN<350>::available()
+                0x00003d34       0x12 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Uart.cpp.o)
+                0x00003d34                RingBufferN<350>::available()
  .text._ZN4Uart5flushEv
-                0x00003d0e       0x1a C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Uart.cpp.o)
-                0x00003d0e                Uart::flush()
+                0x00003d46       0x1a C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Uart.cpp.o)
+                0x00003d46                Uart::flush()
  .text._ZN4Uart9availableEv
-                0x00003d28        0xa C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Uart.cpp.o)
-                0x00003d28                Uart::available()
+                0x00003d60        0xa C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Uart.cpp.o)
+                0x00003d60                Uart::available()
  .text._ZN11RingBufferNILi350EE17availableForStoreEv
-                0x00003d32       0x22 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Uart.cpp.o)
-                0x00003d32                RingBufferN<350>::availableForStore()
+                0x00003d6a       0x22 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Uart.cpp.o)
+                0x00003d6a                RingBufferN<350>::availableForStore()
  .text._ZN4Uart17availableForWriteEv
-                0x00003d54        0xc C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Uart.cpp.o)
-                0x00003d54                Uart::availableForWrite()
+                0x00003d8c        0xc C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Uart.cpp.o)
+                0x00003d8c                Uart::availableForWrite()
  .text._ZN4Uart10IrqHandlerEv
-                0x00003d60       0xda C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Uart.cpp.o)
-                0x00003d60                Uart::IrqHandler()
- *fill*         0x00003e3a        0x2 
+                0x00003d98       0xda C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Uart.cpp.o)
+                0x00003d98                Uart::IrqHandler()
+ *fill*         0x00003e72        0x2 
  .text._ZN4Uart5writeEh
-                0x00003e3c       0xc4 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Uart.cpp.o)
-                0x00003e3c                Uart::write(unsigned char)
+                0x00003e74       0xc4 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Uart.cpp.o)
+                0x00003e74                Uart::write(unsigned char)
  .text._ZN4Uart4readEv
-                0x00003f00       0x52 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Uart.cpp.o)
-                0x00003f00                Uart::read()
+                0x00003f38       0x52 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Uart.cpp.o)
+                0x00003f38                Uart::read()
  .text.Dummy_Handler
-                0x00003f52        0x2 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(cortex_handlers.c.o)
-                0x00003f52                DMAC_Handler
-                0x00003f52                HardFault_Handler
-                0x00003f52                AC_Handler
-                0x00003f52                PendSV_Handler
-                0x00003f52                NMI_Handler
-                0x00003f52                TC7_Handler
-                0x00003f52                SERCOM1_Handler
-                0x00003f52                ADC_Handler
-                0x00003f52                TCC1_Handler
-                0x00003f52                SERCOM2_Handler
-                0x00003f52                TCC0_Handler
-                0x00003f52                RTC_Handler
-                0x00003f52                EIC_Handler
-                0x00003f52                TC6_Handler
-                0x00003f52                WDT_Handler
-                0x00003f52                TC4_Handler
-                0x00003f52                TC3_Handler
-                0x00003f52                Dummy_Handler
-                0x00003f52                PM_Handler
-                0x00003f52                SVC_Handler
-                0x00003f52                TCC2_Handler
-                0x00003f52                EVSYS_Handler
-                0x00003f52                SERCOM3_Handler
-                0x00003f52                SERCOM4_Handler
-                0x00003f52                I2S_Handler
-                0x00003f52                NVMCTRL_Handler
-                0x00003f52                DAC_Handler
-                0x00003f52                PTC_Handler
-                0x00003f52                SYSCTRL_Handler
+                0x00003f8a        0x2 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(cortex_handlers.c.o)
+                0x00003f8a                DMAC_Handler
+                0x00003f8a                HardFault_Handler
+                0x00003f8a                AC_Handler
+                0x00003f8a                PendSV_Handler
+                0x00003f8a                NMI_Handler
+                0x00003f8a                TC7_Handler
+                0x00003f8a                SERCOM1_Handler
+                0x00003f8a                ADC_Handler
+                0x00003f8a                TCC1_Handler
+                0x00003f8a                SERCOM2_Handler
+                0x00003f8a                TCC0_Handler
+                0x00003f8a                RTC_Handler
+                0x00003f8a                EIC_Handler
+                0x00003f8a                TC6_Handler
+                0x00003f8a                WDT_Handler
+                0x00003f8a                TC4_Handler
+                0x00003f8a                TC3_Handler
+                0x00003f8a                Dummy_Handler
+                0x00003f8a                PM_Handler
+                0x00003f8a                SVC_Handler
+                0x00003f8a                TCC2_Handler
+                0x00003f8a                EVSYS_Handler
+                0x00003f8a                SERCOM3_Handler
+                0x00003f8a                SERCOM4_Handler
+                0x00003f8a                I2S_Handler
+                0x00003f8a                NVMCTRL_Handler
+                0x00003f8a                DAC_Handler
+                0x00003f8a                PTC_Handler
+                0x00003f8a                SYSCTRL_Handler
  .text.USB_Handler
-                0x00003f54       0x14 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(cortex_handlers.c.o)
-                0x00003f54                USB_Handler
+                0x00003f8c       0x14 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(cortex_handlers.c.o)
+                0x00003f8c                USB_Handler
  .text.Reset_Handler
-                0x00003f68       0x54 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(cortex_handlers.c.o)
-                0x00003f68                Reset_Handler
+                0x00003fa0       0x54 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(cortex_handlers.c.o)
+                0x00003fa0                Reset_Handler
  .text.SysTick_Handler
-                0x00003fbc       0x10 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(cortex_handlers.c.o)
-                0x00003fbc                SysTick_Handler
+                0x00003ff4       0x10 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(cortex_handlers.c.o)
+                0x00003ff4                SysTick_Handler
  .text.USB_SetHandler
-                0x00003fcc        0xc C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(cortex_handlers.c.o)
-                0x00003fcc                USB_SetHandler
- .text.millis   0x00003fd8        0xc C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(delay.c.o)
-                0x00003fd8                millis
- .text.micros   0x00003fe4       0x60 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(delay.c.o)
-                0x00003fe4                micros
- .text.delay    0x00004044       0x2c C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(delay.c.o)
-                0x00004044                delay
+                0x00004004        0xc C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(cortex_handlers.c.o)
+                0x00004004                USB_SetHandler
+ .text.millis   0x00004010        0xc C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(delay.c.o)
+                0x00004010                millis
+ .text.micros   0x0000401c       0x60 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(delay.c.o)
+                0x0000401c                micros
+ .text.delay    0x0000407c       0x2c C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(delay.c.o)
+                0x0000407c                delay
  .text.SysTick_DefaultHandler
-                0x00004070       0x14 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(delay.c.o)
-                0x00004070                SysTick_DefaultHandler
- .text.__empty  0x00004084        0x2 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(hooks.c.o)
-                0x00004084                yield
- .text.__false  0x00004086        0x4 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(hooks.c.o)
-                0x00004086                sysTickHook
+                0x000040a8       0x14 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(delay.c.o)
+                0x000040a8                SysTick_DefaultHandler
+ .text.__empty  0x000040bc        0x2 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(hooks.c.o)
+                0x000040bc                yield
+ .text.__false  0x000040be        0x4 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(hooks.c.o)
+                0x000040be                sysTickHook
  .text._Z11initVariantv
-                0x0000408a        0x2 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(main.cpp.o)
-                0x0000408a                initVariant()
+                0x000040c2        0x2 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(main.cpp.o)
+                0x000040c2                initVariant()
  .text.startup.main
-                0x0000408c       0x44 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(main.cpp.o)
-                0x0000408c                main
- .text._Znwj    0x000040d0        0x8 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(new.cpp.o)
-                0x000040d0                operator new(unsigned int)
- .text._ZdlPv   0x000040d8        0x8 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(new.cpp.o)
-                0x000040d8                operator delete(void*)
+                0x000040c4       0x44 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(main.cpp.o)
+                0x000040c4                main
+ .text._Znwj    0x00004108        0x8 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(new.cpp.o)
+                0x00004108                operator new(unsigned int)
+ .text._ZdlPv   0x00004110        0x8 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(new.cpp.o)
+                0x00004110                operator delete(void*)
  .text.SystemInit
-                0x000040e0      0x160 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(startup.c.o)
-                0x000040e0                SystemInit
- .text.init     0x00004240       0xe0 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring.c.o)
-                0x00004240                init
+                0x00004118      0x160 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(startup.c.o)
+                0x00004118                SystemInit
+ .text.init     0x00004278       0xe0 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring.c.o)
+                0x00004278                init
  .text.analogReference
-                0x00004320       0x88 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring_analog.c.o)
-                0x00004320                analogReference
- .text.pinMode  0x000043a8       0x60 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring_digital.c.o)
-                0x000043a8                pinMode
+                0x00004358       0x88 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring_analog.c.o)
+                0x00004358                analogReference
+ .text.pinMode  0x000043e0       0x60 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring_digital.c.o)
+                0x000043e0                pinMode
  .text.digitalWrite
-                0x00004408       0x58 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring_digital.c.o)
-                0x00004408                digitalWrite
+                0x00004440       0x58 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring_digital.c.o)
+                0x00004440                digitalWrite
  .text.pinPeripheral
-                0x00004460       0xbc C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring_private.c.o)
-                0x00004460                pinPeripheral
+                0x00004498       0xbc C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring_private.c.o)
+                0x00004498                pinPeripheral
  .text.initiateReset
-                0x0000451c        0xc C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Reset.cpp.o)
-                0x0000451c                initiateReset
+                0x00004554        0xc C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Reset.cpp.o)
+                0x00004554                initiateReset
  .text.cancelReset
-                0x00004528       0x10 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Reset.cpp.o)
-                0x00004528                cancelReset
+                0x00004560       0x10 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Reset.cpp.o)
+                0x00004560                cancelReset
  .text.tickReset
-                0x00004538       0x74 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Reset.cpp.o)
-                0x00004538                tickReset
+                0x00004570       0x74 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Reset.cpp.o)
+                0x00004570                tickReset
  .text._ZN13PluggableUSB_12getInterfaceEPh
-                0x000045ac       0x28 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(PluggableUSB.cpp.o)
-                0x000045ac                PluggableUSB_::getInterface(unsigned char*)
+                0x000045e4       0x28 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(PluggableUSB.cpp.o)
+                0x000045e4                PluggableUSB_::getInterface(unsigned char*)
  .text._ZN13PluggableUSB_13getDescriptorER8USBSetup
-                0x000045d4       0x20 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(PluggableUSB.cpp.o)
-                0x000045d4                PluggableUSB_::getDescriptor(USBSetup&)
+                0x0000460c       0x20 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(PluggableUSB.cpp.o)
+                0x0000460c                PluggableUSB_::getDescriptor(USBSetup&)
  .text._ZN13PluggableUSB_5setupER8USBSetup
-                0x000045f4       0x20 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(PluggableUSB.cpp.o)
-                0x000045f4                PluggableUSB_::setup(USBSetup&)
+                0x0000462c       0x20 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(PluggableUSB.cpp.o)
+                0x0000462c                PluggableUSB_::setup(USBSetup&)
  .text._Z12PluggableUSBv
-                0x00004614       0x28 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(PluggableUSB.cpp.o)
-                0x00004614                PluggableUSB()
+                0x0000464c       0x28 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(PluggableUSB.cpp.o)
+                0x0000464c                PluggableUSB()
  .text._ZN20USBDevice_SAMD21G18x5resetEv
-                0x0000463c       0x2a C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SAMD21_USBDevice.cpp.o)
-                0x0000463c                USBDevice_SAMD21G18x::reset()
- *fill*         0x00004666        0x2 
+                0x00004674       0x2a C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SAMD21_USBDevice.cpp.o)
+                0x00004674                USBDevice_SAMD21G18x::reset()
+ *fill*         0x0000469e        0x2 
  .text._ZN20USBDevice_SAMD21G18x9calibrateEv
-                0x00004668       0x60 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SAMD21_USBDevice.cpp.o)
-                0x00004668                USBDevice_SAMD21G18x::calibrate()
- .text          0x000046c8       0x14 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp\libgcc.a(_thumb1_case_uqi.o)
-                0x000046c8                __gnu_thumb1_case_uqi
- .text          0x000046dc      0x114 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp\libgcc.a(_udivsi3.o)
-                0x000046dc                __aeabi_uidiv
-                0x000046dc                __udivsi3
-                0x000047e8                __aeabi_uidivmod
- .text          0x000047f0        0x4 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp\libgcc.a(_dvmd_tls.o)
-                0x000047f0                __aeabi_idiv0
-                0x000047f0                __aeabi_ldiv0
- .text          0x000047f4       0x40 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp\libgcc.a(_aeabi_uldivmod.o)
-                0x000047f4                __aeabi_uldivmod
- .text          0x00004834       0x50 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp\libgcc.a(_muldi3.o)
-                0x00004834                __muldi3
-                0x00004834                __aeabi_lmul
- .text          0x00004884      0x198 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp\libgcc.a(_udivmoddi4.o)
-                0x00004884                __udivmoddi4
- .text          0x00004a1c       0x3c c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp\libgcc.a(_clzsi2.o)
-                0x00004a1c                __clzsi2
- .text          0x00004a58       0x18 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp\libgcc.a(_clzdi2.o)
-                0x00004a58                __clzdi2
+                0x000046a0       0x60 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SAMD21_USBDevice.cpp.o)
+                0x000046a0                USBDevice_SAMD21G18x::calibrate()
+ .text          0x00004700       0x14 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp\libgcc.a(_thumb1_case_uqi.o)
+                0x00004700                __gnu_thumb1_case_uqi
+ .text          0x00004714      0x114 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp\libgcc.a(_udivsi3.o)
+                0x00004714                __aeabi_uidiv
+                0x00004714                __udivsi3
+                0x00004820                __aeabi_uidivmod
+ .text          0x00004828        0x4 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp\libgcc.a(_dvmd_tls.o)
+                0x00004828                __aeabi_idiv0
+                0x00004828                __aeabi_ldiv0
+ .text          0x0000482c       0x40 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp\libgcc.a(_aeabi_uldivmod.o)
+                0x0000482c                __aeabi_uldivmod
+ .text          0x0000486c       0x50 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp\libgcc.a(_muldi3.o)
+                0x0000486c                __muldi3
+                0x0000486c                __aeabi_lmul
+ .text          0x000048bc      0x198 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp\libgcc.a(_udivmoddi4.o)
+                0x000048bc                __udivmoddi4
+ .text          0x00004a54       0x3c c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp\libgcc.a(_clzsi2.o)
+                0x00004a54                __clzsi2
+ .text          0x00004a90       0x18 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp\libgcc.a(_clzdi2.o)
+                0x00004a90                __clzdi2
  .text.__libc_init_array
-                0x00004a70       0x48 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-init.o)
-                0x00004a70                __libc_init_array
- .text.malloc   0x00004ab8       0x14 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-malloc.o)
-                0x00004ab8                malloc
- .text.free     0x00004acc       0x14 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-malloc.o)
-                0x00004acc                free
- .text.memcmp   0x00004ae0       0x1c c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-memcmp.o)
-                0x00004ae0                memcmp
- .text.memcpy   0x00004afc       0x12 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-memcpy-stub.o)
-                0x00004afc                memcpy
- .text.memset   0x00004b0e       0x10 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-memset.o)
-                0x00004b0e                memset
- *fill*         0x00004b1e        0x2 
- .text._free_r  0x00004b20       0x94 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-nano-freer.o)
-                0x00004b20                _free_r
+                0x00004aa8       0x48 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-init.o)
+                0x00004aa8                __libc_init_array
+ .text.malloc   0x00004af0       0x14 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-malloc.o)
+                0x00004af0                malloc
+ .text.free     0x00004b04       0x14 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-malloc.o)
+                0x00004b04                free
+ .text.memcmp   0x00004b18       0x1c c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-memcmp.o)
+                0x00004b18                memcmp
+ .text.memcpy   0x00004b34       0x12 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-memcpy-stub.o)
+                0x00004b34                memcpy
+ .text.memset   0x00004b46       0x10 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-memset.o)
+                0x00004b46                memset
+ *fill*         0x00004b56        0x2 
+ .text._free_r  0x00004b58       0x94 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-nano-freer.o)
+                0x00004b58                _free_r
  .text._malloc_r
-                0x00004bb4       0xbc c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-nano-mallocr.o)
-                0x00004bb4                _malloc_r
- .text._sbrk_r  0x00004c70       0x24 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-sbrkr.o)
-                0x00004c70                _sbrk_r
- .text          0x00004c94        0xe c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-strlen.o)
-                0x00004c94                strlen
- *fill*         0x00004ca2        0x2 
+                0x00004bec       0xbc c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-nano-mallocr.o)
+                0x00004bec                _malloc_r
+ .text._sbrk_r  0x00004ca8       0x24 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-sbrkr.o)
+                0x00004ca8                _sbrk_r
+ .text          0x00004ccc        0xe c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-strlen.o)
+                0x00004ccc                strlen
+ *fill*         0x00004cda        0x2 
  .text.__malloc_lock
-                0x00004ca4       0x10 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-mlock.o)
-                0x00004ca4                __malloc_lock
+                0x00004cdc       0x10 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-mlock.o)
+                0x00004cdc                __malloc_lock
  .text.__malloc_unlock
-                0x00004cb4       0x10 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-mlock.o)
-                0x00004cb4                __malloc_unlock
+                0x00004cec       0x10 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-mlock.o)
+                0x00004cec                __malloc_unlock
  .text.__retarget_lock_acquire_recursive
-                0x00004cc4        0x2 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-lock.o)
-                0x00004cc4                __retarget_lock_acquire_recursive
+                0x00004cfc        0x2 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-lock.o)
+                0x00004cfc                __retarget_lock_acquire_recursive
  .text.__retarget_lock_release_recursive
-                0x00004cc6        0x2 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-lock.o)
-                0x00004cc6                __retarget_lock_release_recursive
- .text._sbrk    0x00004cc8       0x1c c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libnosys.a(sbrk.o)
-                0x00004cc8                _sbrk
+                0x00004cfe        0x2 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-lock.o)
+                0x00004cfe                __retarget_lock_release_recursive
+ .text._sbrk    0x00004d00       0x1c c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libnosys.a(sbrk.o)
+                0x00004d00                _sbrk
  *(.init)
- .init          0x00004ce4        0x4 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crti.o
-                0x00004ce4                _init
- .init          0x00004ce8        0x8 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtn.o
+ .init          0x00004d1c        0x4 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crti.o
+                0x00004d1c                _init
+ .init          0x00004d20        0x8 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtn.o
  *(.fini)
- .fini          0x00004cf0        0x4 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crti.o
-                0x00004cf0                _fini
- .fini          0x00004cf4        0x8 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtn.o
+ .fini          0x00004d28        0x4 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crti.o
+                0x00004d28                _fini
+ .fini          0x00004d2c        0x8 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtn.o
  *crtbegin.o(.ctors)
  *crtbegin?.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
@@ -1320,85 +1322,86 @@ LOAD c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eab
  *(.dtors)
  *(.rodata*)
  .rodata.loop.str1.1
-                0x00004cfc       0xec C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_bench_feather.ino.cpp.o
+                0x00004d34       0xfe C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_bench_feather.ino.cpp.o
  .rodata.str1.1
-                0x00004de8       0x1c C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_bench_feather.ino.cpp.o
+                0x00004e32       0x1c C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_bench_feather.ino.cpp.o
+ *fill*         0x00004e4e        0x2 
  .rodata._ZZ4loopE3fns
-                0x00004e04       0x18 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_bench_feather.ino.cpp.o
+                0x00004e50       0x18 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_bench_feather.ino.cpp.o
  .rodata._ZZ4loopE4plat
-                0x00004e1c       0x10 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_bench_feather.ino.cpp.o
+                0x00004e68       0x10 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_bench_feather.ino.cpp.o
  .rodata.put_field.str1.1
-                0x00004e2c       0x1c C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_core.c.o
+                0x00004e78       0x1c C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_core.c.o
                                   0x2 (size before relaxing)
- .rodata.timing_run.str1.1
-                0x00004e2c       0x17 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_core.c.o
+ .rodata.timing_run_off.str1.1
+                0x00004e78       0x17 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_core.c.o
  .rodata.timing_lengths
-                0x00004e43        0x3 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_core.c.o
-                0x00004e43                timing_lengths
- *fill*         0x00004e46        0x2 
+                0x00004e8f        0x3 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_core.c.o
+                0x00004e8f                timing_lengths
+ *fill*         0x00004e92        0x2 
  .rodata.g_APinDescription
-                0x00004e48      0x450 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\core\variant.cpp.o
-                0x00004e48                g_APinDescription
+                0x00004e94      0x450 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\core\variant.cpp.o
+                0x00004e94                g_APinDescription
  .rodata._ZN5Print7printlnEv.str1.1
-                0x00005298        0x3 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Print.cpp.o)
- *fill*         0x0000529b        0x1 
+                0x000052e4        0x3 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Print.cpp.o)
+ *fill*         0x000052e7        0x1 
  .rodata._ZL10sercomData
-                0x0000529c       0x30 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SERCOM.cpp.o)
+                0x000052e8       0x30 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SERCOM.cpp.o)
  .rodata._ZTV7Serial_
-                0x000052cc       0x24 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(CDC.cpp.o)
-                0x000052cc                vtable for Serial_
+                0x00005318       0x24 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(CDC.cpp.o)
+                0x00005318                vtable for Serial_
  .rodata._ZN14USBDeviceClass19handleStandardSetupER8USBSetup.str1.1
-                0x000052f0        0x3 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+                0x0000533c        0x3 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
                                   0x1 (size before relaxing)
  .rodata._ZTV26DoubleBufferedEPOutHandler
-                0x000052f0       0x20 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
-                0x000052f0                vtable for DoubleBufferedEPOutHandler
+                0x0000533c       0x20 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+                0x0000533c                vtable for DoubleBufferedEPOutHandler
  .rodata._ZL14STRING_PRODUCT
-                0x00005310        0xb C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
- *fill*         0x0000531b        0x1 
+                0x0000535c        0xb C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+ *fill*         0x00005367        0x1 
  .rodata._ZL15STRING_LANGUAGE
-                0x0000531c        0x4 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+                0x00005368        0x4 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
  .rodata._ZL19STRING_MANUFACTURER
-                0x00005320        0x9 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+                0x0000536c        0x9 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
  .rodata._ZL21USB_DeviceDescriptorB
-                0x00005329       0x12 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
- *fill*         0x0000533b        0x1 
+                0x00005375       0x12 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+ *fill*         0x00005387        0x1 
  .rodata._ZTV4Uart
-                0x0000533c       0x34 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Uart.cpp.o)
-                0x0000533c                vtable for Uart
+                0x00005388       0x34 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Uart.cpp.o)
+                0x00005388                vtable for Uart
  *(.eh_frame*)
- .eh_frame      0x00005370        0x0 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
- .eh_frame      0x00005370        0x4 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtend.o
+ .eh_frame      0x000053bc        0x0 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
+ .eh_frame      0x000053bc        0x4 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtend.o
 
-.glue_7         0x00005374        0x0
- .glue_7        0x00005374        0x0 linker stubs
+.glue_7         0x000053c0        0x0
+ .glue_7        0x000053c0        0x0 linker stubs
 
-.glue_7t        0x00005374        0x0
- .glue_7t       0x00005374        0x0 linker stubs
+.glue_7t        0x000053c0        0x0
+ .glue_7t       0x000053c0        0x0 linker stubs
 
-.vfp11_veneer   0x00005374        0x0
- .vfp11_veneer  0x00005374        0x0 linker stubs
+.vfp11_veneer   0x000053c0        0x0
+ .vfp11_veneer  0x000053c0        0x0 linker stubs
 
-.v4_bx          0x00005374        0x0
- .v4_bx         0x00005374        0x0 linker stubs
+.v4_bx          0x000053c0        0x0
+ .v4_bx         0x000053c0        0x0 linker stubs
 
-.iplt           0x00005374        0x0
- .iplt          0x00005374        0x0 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
+.iplt           0x000053c0        0x0
+ .iplt          0x000053c0        0x0 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x00005374                __exidx_start = .
+                0x000053c0                __exidx_start = .
 
-.ARM.exidx      0x00005374        0x8
+.ARM.exidx      0x000053c0        0x8
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
- .ARM.exidx     0x00005374        0x8 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp\libgcc.a(_udivmoddi4.o)
-                0x0000537c                __exidx_end = .
-                0x0000537c                __etext = .
+ .ARM.exidx     0x000053c0        0x8 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp\libgcc.a(_udivmoddi4.o)
+                0x000053c8                __exidx_end = .
+                0x000053c8                __etext = .
 
-.rel.dyn        0x0000537c        0x0
- .rel.iplt      0x0000537c        0x0 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
+.rel.dyn        0x000053c8        0x0
+ .rel.iplt      0x000053c8        0x0 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
 
-.data           0x20000000      0x100 load address 0x0000537c
+.data           0x20000000      0x100 load address 0x000053c8
                 0x20000000                __data_start__ = .
  *(vtable)
  *(.data*)
@@ -1449,10 +1452,10 @@ LOAD c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eab
  *fill*         0x200000fc        0x4 
                 0x20000100                __data_end__ = .
 
-.igot.plt       0x20000100        0x0 load address 0x0000547c
+.igot.plt       0x20000100        0x0 load address 0x000054c8
  .igot.plt      0x20000100        0x0 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
 
-.bss            0x20000100      0xc98 load address 0x0000547c
+.bss            0x20000100      0xca0 load address 0x000054c8
                 0x20000100                . = ALIGN (0x4)
                 0x20000100                __bss_start__ = .
  *(.bss*)
@@ -1464,105 +1467,105 @@ LOAD c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eab
  *fill*         0x20000121        0x3 
  .bss._ZZ4loopE3run
                 0x20000124        0x4 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_bench_feather.ino.cpp.o
- .bss.buf_a     0x20000128       0x20 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_core.c.o
- .bss.buf_b     0x20000148       0x20 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_core.c.o
- .bss.Serial1   0x20000168      0x2fc C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\core\variant.cpp.o
-                0x20000168                Serial1
- .bss.Serial5   0x20000464      0x2fc C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\core\variant.cpp.o
-                0x20000464                Serial5
- .bss.sercom0   0x20000760        0x8 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\core\variant.cpp.o
-                0x20000760                sercom0
- .bss.sercom1   0x20000768        0x8 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\core\variant.cpp.o
-                0x20000768                sercom1
- .bss.sercom2   0x20000770        0x8 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\core\variant.cpp.o
-                0x20000770                sercom2
- .bss.sercom3   0x20000778        0x8 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\core\variant.cpp.o
-                0x20000778                sercom3
- .bss.sercom4   0x20000780        0x8 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\core\variant.cpp.o
-                0x20000780                sercom4
- .bss.sercom5   0x20000788        0x8 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\core\variant.cpp.o
-                0x20000788                sercom5
- .bss.Serial    0x20000790       0x1c C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(CDC.cpp.o)
-                0x20000790                Serial
+ .bss.buf_a     0x20000128       0x24 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_core.c.o
+ .bss.buf_b     0x2000014c       0x24 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_core.c.o
+ .bss.Serial1   0x20000170      0x2fc C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\core\variant.cpp.o
+                0x20000170                Serial1
+ .bss.Serial5   0x2000046c      0x2fc C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\core\variant.cpp.o
+                0x2000046c                Serial5
+ .bss.sercom0   0x20000768        0x8 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\core\variant.cpp.o
+                0x20000768                sercom0
+ .bss.sercom1   0x20000770        0x8 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\core\variant.cpp.o
+                0x20000770                sercom1
+ .bss.sercom2   0x20000778        0x8 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\core\variant.cpp.o
+                0x20000778                sercom2
+ .bss.sercom3   0x20000780        0x8 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\core\variant.cpp.o
+                0x20000780                sercom3
+ .bss.sercom4   0x20000788        0x8 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\core\variant.cpp.o
+                0x20000788                sercom4
+ .bss.sercom5   0x20000790        0x8 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\core\variant.cpp.o
+                0x20000790                sercom5
+ .bss.Serial    0x20000798       0x1c C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(CDC.cpp.o)
+                0x20000798                Serial
  .bss.USBDevice
-                0x200007ac        0x1 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
-                0x200007ac                USBDevice
- *fill*         0x200007ad        0x3 
+                0x200007b4        0x1 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+                0x200007b4                USBDevice
+ *fill*         0x200007b5        0x3 
  .bss._ZL10epHandlers
-                0x200007b0       0x1c C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+                0x200007b8       0x1c C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
  .bss._ZL10rxLEDPulse
-                0x200007cc        0x1 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+                0x200007d4        0x1 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
  .bss._ZL10txLEDPulse
-                0x200007cd        0x1 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+                0x200007d5        0x1 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
  .bss._ZL14isEndpointHalt
-                0x200007ce        0x1 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
- .bss._ZL20LastTransmitTimedOut
-                0x200007cf        0x7 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
- .bss._ZL21isRemoteWakeUpEnabled
                 0x200007d6        0x1 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
- *fill*         0x200007d7        0x1 
+ .bss._ZL20LastTransmitTimedOut
+                0x200007d7        0x7 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+ .bss._ZL21isRemoteWakeUpEnabled
+                0x200007de        0x1 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+ *fill*         0x200007df        0x1 
  .bss._ZL22udd_ep_in_cache_buffer
-                0x200007d8      0x1c0 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+                0x200007e0      0x1c0 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
  .bss._ZL23udd_ep_out_cache_buffer
-                0x20000998      0x1c0 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
- .bss._dry_run  0x20000b58        0x1 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
-                0x20000b58                _dry_run
+                0x200009a0      0x1c0 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+ .bss._dry_run  0x20000b60        0x1 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+                0x20000b60                _dry_run
  .bss._pack_buffer
-                0x20000b59      0x100 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
-                0x20000b59                _pack_buffer
+                0x20000b61      0x100 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+                0x20000b61                _pack_buffer
  .bss._pack_message
-                0x20000c59        0x1 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
-                0x20000c59                _pack_message
+                0x20000c61        0x1 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+                0x20000c61                _pack_message
  .bss._pack_size
-                0x20000c5a        0x2 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
-                0x20000c5a                _pack_size
+                0x20000c62        0x2 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+                0x20000c62                _pack_size
  .bss._usbConfiguration
-                0x20000c5c        0x4 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
-                0x20000c5c                _usbConfiguration
+                0x20000c64        0x4 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+                0x20000c64                _usbConfiguration
  .bss._usbSetInterface
-                0x20000c60        0x4 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
-                0x20000c60                _usbSetInterface
- .bss.usbd      0x20000c64      0x104 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
-                0x20000c64                usbd
- .bss.usb_isr   0x20000d68        0x4 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(cortex_handlers.c.o)
+                0x20000c68        0x4 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+                0x20000c68                _usbSetInterface
+ .bss.usbd      0x20000c6c      0x104 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+                0x20000c6c                usbd
+ .bss.usb_isr   0x20000d70        0x4 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(cortex_handlers.c.o)
  .bss._ulTickCount
-                0x20000d6c        0x4 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(delay.c.o)
+                0x20000d74        0x4 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(delay.c.o)
  .bss._ZGVZ12PluggableUSBvE3obj
-                0x20000d70        0x4 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(PluggableUSB.cpp.o)
+                0x20000d78        0x4 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(PluggableUSB.cpp.o)
  .bss._ZZ12PluggableUSBvE3obj
-                0x20000d74        0x8 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(PluggableUSB.cpp.o)
+                0x20000d7c        0x8 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(PluggableUSB.cpp.o)
  .bss.__malloc_free_list
-                0x20000d7c        0x4 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-nano-mallocr.o)
-                0x20000d7c                __malloc_free_list
+                0x20000d84        0x4 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-nano-mallocr.o)
+                0x20000d84                __malloc_free_list
  .bss.__malloc_sbrk_start
-                0x20000d80        0x4 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-nano-mallocr.o)
-                0x20000d80                __malloc_sbrk_start
+                0x20000d88        0x4 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-nano-mallocr.o)
+                0x20000d88                __malloc_sbrk_start
  .bss.heap_end.4144
-                0x20000d84        0x4 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libnosys.a(sbrk.o)
+                0x20000d8c        0x4 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libnosys.a(sbrk.o)
  *(COMMON)
- COMMON         0x20000d88        0x4 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-reent.o)
-                0x20000d88                errno
- COMMON         0x20000d8c        0x9 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-lock.o)
-                0x20000d8c                __lock___atexit_recursive_mutex
-                0x20000d8d                __lock___arc4random_mutex
-                0x20000d8e                __lock___env_recursive_mutex
-                0x20000d8f                __lock___sinit_recursive_mutex
-                0x20000d90                __lock___malloc_recursive_mutex
-                0x20000d91                __lock___at_quick_exit_mutex
-                0x20000d92                __lock___dd_hash_mutex
-                0x20000d93                __lock___tz_mutex
-                0x20000d94                __lock___sfp_recursive_mutex
-                0x20000d98                . = ALIGN (0x4)
- *fill*         0x20000d95        0x3 
-                0x20000d98                __bss_end__ = .
+ COMMON         0x20000d90        0x4 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-reent.o)
+                0x20000d90                errno
+ COMMON         0x20000d94        0x9 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-lock.o)
+                0x20000d94                __lock___atexit_recursive_mutex
+                0x20000d95                __lock___arc4random_mutex
+                0x20000d96                __lock___env_recursive_mutex
+                0x20000d97                __lock___sinit_recursive_mutex
+                0x20000d98                __lock___malloc_recursive_mutex
+                0x20000d99                __lock___at_quick_exit_mutex
+                0x20000d9a                __lock___dd_hash_mutex
+                0x20000d9b                __lock___tz_mutex
+                0x20000d9c                __lock___sfp_recursive_mutex
+                0x20000da0                . = ALIGN (0x4)
+ *fill*         0x20000d9d        0x3 
+                0x20000da0                __bss_end__ = .
 
-.heap           0x20000d98        0x0
-                0x20000d98                __end__ = .
-                0x20000d98                PROVIDE (end = .)
+.heap           0x20000da0        0x0
+                0x20000da0                __end__ = .
+                0x20000da0                PROVIDE (end = .)
  *(.heap*)
-                0x20000d98                __HeapLimit = .
+                0x20000da0                __HeapLimit = .
 
-.stack_dummy    0x20000d98        0x0
+.stack_dummy    0x20000da0        0x0
  *(.stack*)
                 0x20008000                __StackTop = (ORIGIN (RAM) + LENGTH (RAM))
                 0x20008000                __StackLimit = (__StackTop - SIZEOF (.stack_dummy))
@@ -1695,253 +1698,253 @@ OUTPUT(C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F22
  .comment       0x00000079       0x7a C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(PluggableUSB.cpp.o)
  .comment       0x00000079       0x7a C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SAMD21_USBDevice.cpp.o)
 
-.debug_info     0x00000000    0x72c5a
+.debug_info     0x00000000    0x72d80
  .debug_info    0x00000000      0xa75 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\compare.c.o
- .debug_info    0x00000a75     0x8733 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_bench_feather.ino.cpp.o
- .debug_info    0x000091a8      0x751 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_core.c.o
- .debug_info    0x000098f9     0x6d26 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\core\variant.cpp.o
- .debug_info    0x0001061f     0x9786 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Print.cpp.o)
- .debug_info    0x00019da5     0x821a C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SERCOM.cpp.o)
- .debug_info    0x00021fbf     0x9021 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(CDC.cpp.o)
- .debug_info    0x0002afe0     0xeab9 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
- .debug_info    0x00039a99     0x9ce3 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Uart.cpp.o)
- .debug_info    0x0004377c     0x121b C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(cortex_handlers.c.o)
- .debug_info    0x00044997     0x14c5 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(delay.c.o)
- .debug_info    0x00045e5c       0x67 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(hooks.c.o)
- .debug_info    0x00045ec3     0x6901 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(main.cpp.o)
- .debug_info    0x0004c7c4     0x1111 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(new.cpp.o)
- .debug_info    0x0004d8d5     0x3863 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(startup.c.o)
- .debug_info    0x00051138     0x307e C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring.c.o)
- .debug_info    0x000541b6     0x5505 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring_analog.c.o)
- .debug_info    0x000596bb     0x19bd C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring_digital.c.o)
- .debug_info    0x0005b078     0x194b C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring_private.c.o)
- .debug_info    0x0005c9c3     0x6efa C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Reset.cpp.o)
- .debug_info    0x000638bd     0x6daa C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(PluggableUSB.cpp.o)
- .debug_info    0x0006a667     0x85f3 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SAMD21_USBDevice.cpp.o)
+ .debug_info    0x00000a75     0x8777 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_bench_feather.ino.cpp.o
+ .debug_info    0x000091ec      0x833 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_core.c.o
+ .debug_info    0x00009a1f     0x6d26 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\core\variant.cpp.o
+ .debug_info    0x00010745     0x9786 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Print.cpp.o)
+ .debug_info    0x00019ecb     0x821a C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SERCOM.cpp.o)
+ .debug_info    0x000220e5     0x9021 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(CDC.cpp.o)
+ .debug_info    0x0002b106     0xeab9 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+ .debug_info    0x00039bbf     0x9ce3 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Uart.cpp.o)
+ .debug_info    0x000438a2     0x121b C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(cortex_handlers.c.o)
+ .debug_info    0x00044abd     0x14c5 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(delay.c.o)
+ .debug_info    0x00045f82       0x67 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(hooks.c.o)
+ .debug_info    0x00045fe9     0x6901 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(main.cpp.o)
+ .debug_info    0x0004c8ea     0x1111 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(new.cpp.o)
+ .debug_info    0x0004d9fb     0x3863 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(startup.c.o)
+ .debug_info    0x0005125e     0x307e C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring.c.o)
+ .debug_info    0x000542dc     0x5505 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring_analog.c.o)
+ .debug_info    0x000597e1     0x19bd C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring_digital.c.o)
+ .debug_info    0x0005b19e     0x194b C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring_private.c.o)
+ .debug_info    0x0005cae9     0x6efa C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Reset.cpp.o)
+ .debug_info    0x000639e3     0x6daa C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(PluggableUSB.cpp.o)
+ .debug_info    0x0006a78d     0x85f3 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SAMD21_USBDevice.cpp.o)
 
-.debug_abbrev   0x00000000     0x817a
+.debug_abbrev   0x00000000     0x8198
  .debug_abbrev  0x00000000      0x237 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\compare.c.o
  .debug_abbrev  0x00000237      0x86f C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_bench_feather.ino.cpp.o
- .debug_abbrev  0x00000aa6      0x226 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_core.c.o
- .debug_abbrev  0x00000ccc      0x5f0 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\core\variant.cpp.o
- .debug_abbrev  0x000012bc      0xa5e C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Print.cpp.o)
- .debug_abbrev  0x00001d1a      0x98c C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SERCOM.cpp.o)
- .debug_abbrev  0x000026a6      0xa8f C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(CDC.cpp.o)
- .debug_abbrev  0x00003135      0xceb C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
- .debug_abbrev  0x00003e20      0xa66 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Uart.cpp.o)
- .debug_abbrev  0x00004886      0x303 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(cortex_handlers.c.o)
- .debug_abbrev  0x00004b89      0x33a C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(delay.c.o)
- .debug_abbrev  0x00004ec3       0x4d C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(hooks.c.o)
- .debug_abbrev  0x00004f10      0x683 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(main.cpp.o)
- .debug_abbrev  0x00005593      0x350 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(new.cpp.o)
- .debug_abbrev  0x000058e3      0x2f7 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(startup.c.o)
- .debug_abbrev  0x00005bda      0x3e8 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring.c.o)
- .debug_abbrev  0x00005fc2      0x554 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring_analog.c.o)
- .debug_abbrev  0x00006516      0x389 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring_digital.c.o)
- .debug_abbrev  0x0000689f      0x351 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring_private.c.o)
- .debug_abbrev  0x00006bf0      0x750 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Reset.cpp.o)
- .debug_abbrev  0x00007340      0x778 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(PluggableUSB.cpp.o)
- .debug_abbrev  0x00007ab8      0x6c2 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SAMD21_USBDevice.cpp.o)
+ .debug_abbrev  0x00000aa6      0x244 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_core.c.o
+ .debug_abbrev  0x00000cea      0x5f0 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\core\variant.cpp.o
+ .debug_abbrev  0x000012da      0xa5e C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Print.cpp.o)
+ .debug_abbrev  0x00001d38      0x98c C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SERCOM.cpp.o)
+ .debug_abbrev  0x000026c4      0xa8f C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(CDC.cpp.o)
+ .debug_abbrev  0x00003153      0xceb C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+ .debug_abbrev  0x00003e3e      0xa66 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Uart.cpp.o)
+ .debug_abbrev  0x000048a4      0x303 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(cortex_handlers.c.o)
+ .debug_abbrev  0x00004ba7      0x33a C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(delay.c.o)
+ .debug_abbrev  0x00004ee1       0x4d C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(hooks.c.o)
+ .debug_abbrev  0x00004f2e      0x683 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(main.cpp.o)
+ .debug_abbrev  0x000055b1      0x350 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(new.cpp.o)
+ .debug_abbrev  0x00005901      0x2f7 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(startup.c.o)
+ .debug_abbrev  0x00005bf8      0x3e8 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring.c.o)
+ .debug_abbrev  0x00005fe0      0x554 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring_analog.c.o)
+ .debug_abbrev  0x00006534      0x389 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring_digital.c.o)
+ .debug_abbrev  0x000068bd      0x351 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring_private.c.o)
+ .debug_abbrev  0x00006c0e      0x750 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Reset.cpp.o)
+ .debug_abbrev  0x0000735e      0x778 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(PluggableUSB.cpp.o)
+ .debug_abbrev  0x00007ad6      0x6c2 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SAMD21_USBDevice.cpp.o)
 
-.debug_loc      0x00000000     0x8a99
+.debug_loc      0x00000000     0x8ba4
  .debug_loc     0x00000000      0x18a C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\compare.c.o
- .debug_loc     0x0000018a      0x1dd C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_bench_feather.ino.cpp.o
- .debug_loc     0x00000367      0x655 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_core.c.o
- .debug_loc     0x000009bc       0x2e C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\core\variant.cpp.o
- .debug_loc     0x000009ea     0x1dc4 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Print.cpp.o)
- .debug_loc     0x000027ae      0xfac C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SERCOM.cpp.o)
- .debug_loc     0x0000375a      0x79e C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(CDC.cpp.o)
- .debug_loc     0x00003ef8     0x3108 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
- .debug_loc     0x00007000      0xc6a C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Uart.cpp.o)
- .debug_loc     0x00007c6a       0xa5 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(cortex_handlers.c.o)
- .debug_loc     0x00007d0f      0x12a C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(delay.c.o)
- .debug_loc     0x00007e39       0x4a C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(new.cpp.o)
- .debug_loc     0x00007e83       0x47 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(startup.c.o)
- .debug_loc     0x00007eca       0xd9 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring.c.o)
- .debug_loc     0x00007fa3      0x51c C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring_analog.c.o)
- .debug_loc     0x000084bf      0x13e C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring_digital.c.o)
- .debug_loc     0x000085fd      0x14e C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring_private.c.o)
- .debug_loc     0x0000874b      0x295 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(PluggableUSB.cpp.o)
- .debug_loc     0x000089e0       0xb9 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SAMD21_USBDevice.cpp.o)
+ .debug_loc     0x0000018a      0x1dc C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_bench_feather.ino.cpp.o
+ .debug_loc     0x00000366      0x761 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_core.c.o
+ .debug_loc     0x00000ac7       0x2e C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\core\variant.cpp.o
+ .debug_loc     0x00000af5     0x1dc4 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Print.cpp.o)
+ .debug_loc     0x000028b9      0xfac C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SERCOM.cpp.o)
+ .debug_loc     0x00003865      0x79e C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(CDC.cpp.o)
+ .debug_loc     0x00004003     0x3108 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+ .debug_loc     0x0000710b      0xc6a C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Uart.cpp.o)
+ .debug_loc     0x00007d75       0xa5 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(cortex_handlers.c.o)
+ .debug_loc     0x00007e1a      0x12a C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(delay.c.o)
+ .debug_loc     0x00007f44       0x4a C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(new.cpp.o)
+ .debug_loc     0x00007f8e       0x47 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(startup.c.o)
+ .debug_loc     0x00007fd5       0xd9 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring.c.o)
+ .debug_loc     0x000080ae      0x51c C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring_analog.c.o)
+ .debug_loc     0x000085ca      0x13e C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring_digital.c.o)
+ .debug_loc     0x00008708      0x14e C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring_private.c.o)
+ .debug_loc     0x00008856      0x295 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(PluggableUSB.cpp.o)
+ .debug_loc     0x00008aeb       0xb9 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SAMD21_USBDevice.cpp.o)
 
-.debug_aranges  0x00000000      0x998
+.debug_aranges  0x00000000      0x9a0
  .debug_aranges
                 0x00000000       0x30 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\compare.c.o
  .debug_aranges
                 0x00000030       0x50 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_bench_feather.ino.cpp.o
  .debug_aranges
-                0x00000080       0x38 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_core.c.o
+                0x00000080       0x40 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_core.c.o
  .debug_aranges
-                0x000000b8       0x30 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\core\variant.cpp.o
+                0x000000c0       0x30 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\core\variant.cpp.o
  .debug_aranges
-                0x000000e8      0x130 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Print.cpp.o)
+                0x000000f0      0x130 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Print.cpp.o)
  .debug_aranges
-                0x00000218      0x208 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SERCOM.cpp.o)
+                0x00000220      0x208 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SERCOM.cpp.o)
  .debug_aranges
-                0x00000420       0xd8 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(CDC.cpp.o)
+                0x00000428       0xd8 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(CDC.cpp.o)
  .debug_aranges
-                0x000004f8      0x180 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+                0x00000500      0x180 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
  .debug_aranges
-                0x00000678       0xb0 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Uart.cpp.o)
+                0x00000680       0xb0 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Uart.cpp.o)
  .debug_aranges
-                0x00000728       0x40 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(cortex_handlers.c.o)
+                0x00000730       0x40 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(cortex_handlers.c.o)
  .debug_aranges
-                0x00000768       0x38 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(delay.c.o)
+                0x00000770       0x38 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(delay.c.o)
  .debug_aranges
-                0x000007a0       0x30 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(hooks.c.o)
+                0x000007a8       0x30 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(hooks.c.o)
  .debug_aranges
-                0x000007d0       0x28 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(main.cpp.o)
+                0x000007d8       0x28 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(main.cpp.o)
  .debug_aranges
-                0x000007f8       0x28 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(new.cpp.o)
+                0x00000800       0x28 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(new.cpp.o)
  .debug_aranges
-                0x00000820       0x20 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(startup.c.o)
+                0x00000828       0x20 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(startup.c.o)
  .debug_aranges
-                0x00000840       0x20 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring.c.o)
+                0x00000848       0x20 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring.c.o)
  .debug_aranges
-                0x00000860       0x40 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring_analog.c.o)
+                0x00000868       0x40 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring_analog.c.o)
  .debug_aranges
-                0x000008a0       0x30 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring_digital.c.o)
+                0x000008a8       0x30 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring_digital.c.o)
  .debug_aranges
-                0x000008d0       0x20 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring_private.c.o)
+                0x000008d8       0x20 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring_private.c.o)
  .debug_aranges
-                0x000008f0       0x30 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Reset.cpp.o)
+                0x000008f8       0x30 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Reset.cpp.o)
  .debug_aranges
-                0x00000920       0x50 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(PluggableUSB.cpp.o)
+                0x00000928       0x50 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(PluggableUSB.cpp.o)
  .debug_aranges
-                0x00000970       0x28 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SAMD21_USBDevice.cpp.o)
+                0x00000978       0x28 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SAMD21_USBDevice.cpp.o)
 
-.debug_ranges   0x00000000     0x17c0
+.debug_ranges   0x00000000     0x17c8
  .debug_ranges  0x00000000       0x20 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\compare.c.o
  .debug_ranges  0x00000020       0x78 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_bench_feather.ino.cpp.o
- .debug_ranges  0x00000098       0x58 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_core.c.o
- .debug_ranges  0x000000f0       0x38 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\core\variant.cpp.o
- .debug_ranges  0x00000128      0x248 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Print.cpp.o)
- .debug_ranges  0x00000370      0x2f0 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SERCOM.cpp.o)
- .debug_ranges  0x00000660      0x160 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(CDC.cpp.o)
- .debug_ranges  0x000007c0      0x9f8 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
- .debug_ranges  0x000011b8      0x2e8 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Uart.cpp.o)
- .debug_ranges  0x000014a0       0x30 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(cortex_handlers.c.o)
- .debug_ranges  0x000014d0       0x28 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(delay.c.o)
- .debug_ranges  0x000014f8       0x20 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(hooks.c.o)
- .debug_ranges  0x00001518       0x18 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(main.cpp.o)
- .debug_ranges  0x00001530       0x18 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(new.cpp.o)
- .debug_ranges  0x00001548       0x10 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(startup.c.o)
- .debug_ranges  0x00001558       0x80 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring.c.o)
- .debug_ranges  0x000015d8       0xd8 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring_analog.c.o)
- .debug_ranges  0x000016b0       0x20 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring_digital.c.o)
- .debug_ranges  0x000016d0       0x28 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring_private.c.o)
- .debug_ranges  0x000016f8       0x50 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Reset.cpp.o)
- .debug_ranges  0x00001748       0x60 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(PluggableUSB.cpp.o)
- .debug_ranges  0x000017a8       0x18 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SAMD21_USBDevice.cpp.o)
+ .debug_ranges  0x00000098       0x60 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_core.c.o
+ .debug_ranges  0x000000f8       0x38 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\core\variant.cpp.o
+ .debug_ranges  0x00000130      0x248 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Print.cpp.o)
+ .debug_ranges  0x00000378      0x2f0 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SERCOM.cpp.o)
+ .debug_ranges  0x00000668      0x160 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(CDC.cpp.o)
+ .debug_ranges  0x000007c8      0x9f8 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+ .debug_ranges  0x000011c0      0x2e8 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Uart.cpp.o)
+ .debug_ranges  0x000014a8       0x30 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(cortex_handlers.c.o)
+ .debug_ranges  0x000014d8       0x28 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(delay.c.o)
+ .debug_ranges  0x00001500       0x20 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(hooks.c.o)
+ .debug_ranges  0x00001520       0x18 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(main.cpp.o)
+ .debug_ranges  0x00001538       0x18 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(new.cpp.o)
+ .debug_ranges  0x00001550       0x10 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(startup.c.o)
+ .debug_ranges  0x00001560       0x80 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring.c.o)
+ .debug_ranges  0x000015e0       0xd8 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring_analog.c.o)
+ .debug_ranges  0x000016b8       0x20 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring_digital.c.o)
+ .debug_ranges  0x000016d8       0x28 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring_private.c.o)
+ .debug_ranges  0x00001700       0x50 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Reset.cpp.o)
+ .debug_ranges  0x00001750       0x60 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(PluggableUSB.cpp.o)
+ .debug_ranges  0x000017b0       0x18 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SAMD21_USBDevice.cpp.o)
 
-.debug_line     0x00000000     0xe5c7
+.debug_line     0x00000000     0xe654
  .debug_line    0x00000000      0x361 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\compare.c.o
- .debug_line    0x00000361      0xb3b C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_bench_feather.ino.cpp.o
- .debug_line    0x00000e9c      0x5d7 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_core.c.o
- .debug_line    0x00001473      0x6f1 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\core\variant.cpp.o
- .debug_line    0x00001b64     0x1200 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Print.cpp.o)
- .debug_line    0x00002d64     0x17ca C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SERCOM.cpp.o)
- .debug_line    0x0000452e      0xd46 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(CDC.cpp.o)
- .debug_line    0x00005274     0x289a C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
- .debug_line    0x00007b0e     0x102f C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Uart.cpp.o)
- .debug_line    0x00008b3d      0x4b4 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(cortex_handlers.c.o)
- .debug_line    0x00008ff1      0x6fa C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(delay.c.o)
- .debug_line    0x000096eb       0xd6 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(hooks.c.o)
- .debug_line    0x000097c1      0x7e6 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(main.cpp.o)
- .debug_line    0x00009fa7      0x432 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(new.cpp.o)
- .debug_line    0x0000a3d9      0x71e C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(startup.c.o)
- .debug_line    0x0000aaf7      0x76e C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring.c.o)
- .debug_line    0x0000b265      0xc37 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring_analog.c.o)
- .debug_line    0x0000be9c      0x644 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring_digital.c.o)
- .debug_line    0x0000c4e0      0x5da C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring_private.c.o)
- .debug_line    0x0000caba      0x915 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Reset.cpp.o)
- .debug_line    0x0000d3cf      0x9e8 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(PluggableUSB.cpp.o)
- .debug_line    0x0000ddb7      0x810 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SAMD21_USBDevice.cpp.o)
+ .debug_line    0x00000361      0xb4f C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_bench_feather.ino.cpp.o
+ .debug_line    0x00000eb0      0x650 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_core.c.o
+ .debug_line    0x00001500      0x6f1 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\core\variant.cpp.o
+ .debug_line    0x00001bf1     0x1200 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Print.cpp.o)
+ .debug_line    0x00002df1     0x17ca C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SERCOM.cpp.o)
+ .debug_line    0x000045bb      0xd46 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(CDC.cpp.o)
+ .debug_line    0x00005301     0x289a C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+ .debug_line    0x00007b9b     0x102f C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Uart.cpp.o)
+ .debug_line    0x00008bca      0x4b4 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(cortex_handlers.c.o)
+ .debug_line    0x0000907e      0x6fa C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(delay.c.o)
+ .debug_line    0x00009778       0xd6 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(hooks.c.o)
+ .debug_line    0x0000984e      0x7e6 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(main.cpp.o)
+ .debug_line    0x0000a034      0x432 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(new.cpp.o)
+ .debug_line    0x0000a466      0x71e C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(startup.c.o)
+ .debug_line    0x0000ab84      0x76e C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring.c.o)
+ .debug_line    0x0000b2f2      0xc37 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring_analog.c.o)
+ .debug_line    0x0000bf29      0x644 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring_digital.c.o)
+ .debug_line    0x0000c56d      0x5da C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring_private.c.o)
+ .debug_line    0x0000cb47      0x915 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Reset.cpp.o)
+ .debug_line    0x0000d45c      0x9e8 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(PluggableUSB.cpp.o)
+ .debug_line    0x0000de44      0x810 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SAMD21_USBDevice.cpp.o)
 
-.debug_str      0x00000000     0xa7ed
+.debug_str      0x00000000     0xa82d
  .debug_str     0x00000000      0x59d C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\compare.c.o
                                 0x615 (size before relaxing)
- .debug_str     0x0000059d     0x3aff C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_bench_feather.ino.cpp.o
-                               0x4a8e (size before relaxing)
- .debug_str     0x0000409c       0xc5 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_core.c.o
-                                0x315 (size before relaxing)
- .debug_str     0x00004161      0x6bf C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\core\variant.cpp.o
+ .debug_str     0x0000059d     0x3b34 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_bench_feather.ino.cpp.o
+                               0x4a98 (size before relaxing)
+ .debug_str     0x000040d1       0xd0 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_core.c.o
+                                0x32a (size before relaxing)
+ .debug_str     0x000041a1      0x6bf C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\core\variant.cpp.o
                                0x3859 (size before relaxing)
- .debug_str     0x00004820      0xfe1 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Print.cpp.o)
+ .debug_str     0x00004860      0xfe1 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Print.cpp.o)
                                0x50c0 (size before relaxing)
- .debug_str     0x00005801      0x54a C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SERCOM.cpp.o)
+ .debug_str     0x00005841      0x54a C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SERCOM.cpp.o)
                                0x46cd (size before relaxing)
- .debug_str     0x00005d4b      0xbbb C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(CDC.cpp.o)
+ .debug_str     0x00005d8b      0xbbb C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(CDC.cpp.o)
                                0x5970 (size before relaxing)
- .debug_str     0x00006906     0x2570 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+ .debug_str     0x00006946     0x2570 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
                                0x733b (size before relaxing)
- .debug_str     0x00008e76      0x50b C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Uart.cpp.o)
+ .debug_str     0x00008eb6      0x50b C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Uart.cpp.o)
                                0x5c0d (size before relaxing)
- .debug_str     0x00009381      0x3f4 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(cortex_handlers.c.o)
+ .debug_str     0x000093c1      0x3f4 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(cortex_handlers.c.o)
                                 0xfe9 (size before relaxing)
- .debug_str     0x00009775       0xb8 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(delay.c.o)
+ .debug_str     0x000097b5       0xb8 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(delay.c.o)
                                 0xeeb (size before relaxing)
- .debug_str     0x0000982d       0x7b C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(hooks.c.o)
+ .debug_str     0x0000986d       0x7b C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(hooks.c.o)
                                 0x18c (size before relaxing)
- .debug_str     0x000098a8       0xb7 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(main.cpp.o)
+ .debug_str     0x000098e8       0xb7 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(main.cpp.o)
                                0x4104 (size before relaxing)
- .debug_str     0x0000995f       0x94 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(new.cpp.o)
+ .debug_str     0x0000999f       0x94 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(new.cpp.o)
                                 0x81a (size before relaxing)
- .debug_str     0x000099f3      0x6be C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(startup.c.o)
+ .debug_str     0x00009a33      0x6be C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(startup.c.o)
                                0x1726 (size before relaxing)
- .debug_str     0x0000a0b1      0x206 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring.c.o)
+ .debug_str     0x0000a0f1      0x206 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring.c.o)
                                0x1820 (size before relaxing)
- .debug_str     0x0000a2b7      0x155 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring_analog.c.o)
+ .debug_str     0x0000a2f7      0x155 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring_analog.c.o)
                                0x1c7f (size before relaxing)
- .debug_str     0x0000a40c       0x93 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring_digital.c.o)
+ .debug_str     0x0000a44c       0x93 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring_digital.c.o)
                                 0xff1 (size before relaxing)
- .debug_str     0x0000a49f       0x7f C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring_private.c.o)
+ .debug_str     0x0000a4df       0x7f C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring_private.c.o)
                                 0xfde (size before relaxing)
- .debug_str     0x0000a51e      0x17e C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Reset.cpp.o)
+ .debug_str     0x0000a55e      0x17e C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Reset.cpp.o)
                                0x433c (size before relaxing)
- .debug_str     0x0000a69c       0x98 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(PluggableUSB.cpp.o)
+ .debug_str     0x0000a6dc       0x98 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(PluggableUSB.cpp.o)
                                0x4394 (size before relaxing)
- .debug_str     0x0000a734       0xb9 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SAMD21_USBDevice.cpp.o)
+ .debug_str     0x0000a774       0xb9 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SAMD21_USBDevice.cpp.o)
                                0x5c1a (size before relaxing)
 
-.debug_frame    0x00000000     0x1a94
+.debug_frame    0x00000000     0x1ab0
  .debug_frame   0x00000000       0x60 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\compare.c.o
  .debug_frame   0x00000060       0xac C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_bench_feather.ino.cpp.o
- .debug_frame   0x0000010c       0x88 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_core.c.o
- .debug_frame   0x00000194       0x64 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\core\variant.cpp.o
- .debug_frame   0x000001f8      0x3d0 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Print.cpp.o)
- .debug_frame   0x000005c8      0x4b4 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SERCOM.cpp.o)
- .debug_frame   0x00000a7c      0x1f8 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(CDC.cpp.o)
- .debug_frame   0x00000c74      0x470 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
- .debug_frame   0x000010e4      0x1d0 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Uart.cpp.o)
- .debug_frame   0x000012b4       0x78 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(cortex_handlers.c.o)
- .debug_frame   0x0000132c       0x78 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(delay.c.o)
- .debug_frame   0x000013a4       0x40 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(hooks.c.o)
- .debug_frame   0x000013e4       0x38 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(main.cpp.o)
- .debug_frame   0x0000141c       0x70 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(new.cpp.o)
- .debug_frame   0x0000148c       0x2c C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(startup.c.o)
- .debug_frame   0x000014b8       0x28 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring.c.o)
- .debug_frame   0x000014e0       0x80 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring_analog.c.o)
- .debug_frame   0x00001560       0x60 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring_digital.c.o)
- .debug_frame   0x000015c0       0x2c C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring_private.c.o)
- .debug_frame   0x000015ec       0x48 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Reset.cpp.o)
- .debug_frame   0x00001634       0xc8 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(PluggableUSB.cpp.o)
- .debug_frame   0x000016fc       0x48 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SAMD21_USBDevice.cpp.o)
- .debug_frame   0x00001744       0x20 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp\libgcc.a(_udivsi3.o)
- .debug_frame   0x00001764       0x34 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp\libgcc.a(_muldi3.o)
- .debug_frame   0x00001798       0x3c c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp\libgcc.a(_udivmoddi4.o)
- .debug_frame   0x000017d4       0x2c c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-init.o)
- .debug_frame   0x00001800       0x40 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-malloc.o)
- .debug_frame   0x00001840       0x2c c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-memcmp.o)
- .debug_frame   0x0000186c       0x28 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-memcpy-stub.o)
- .debug_frame   0x00001894       0x20 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-memset.o)
- .debug_frame   0x000018b4       0x2c c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-nano-freer.o)
- .debug_frame   0x000018e0       0x30 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-nano-mallocr.o)
- .debug_frame   0x00001910       0x2c c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-sbrkr.o)
- .debug_frame   0x0000193c       0x40 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-mlock.o)
- .debug_frame   0x0000197c       0x48 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-reent.o)
- .debug_frame   0x000019c4       0xb0 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-lock.o)
- .debug_frame   0x00001a74       0x20 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libnosys.a(sbrk.o)
+ .debug_frame   0x0000010c       0xa4 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_core.c.o
+ .debug_frame   0x000001b0       0x64 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\core\variant.cpp.o
+ .debug_frame   0x00000214      0x3d0 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Print.cpp.o)
+ .debug_frame   0x000005e4      0x4b4 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SERCOM.cpp.o)
+ .debug_frame   0x00000a98      0x1f8 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(CDC.cpp.o)
+ .debug_frame   0x00000c90      0x470 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
+ .debug_frame   0x00001100      0x1d0 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Uart.cpp.o)
+ .debug_frame   0x000012d0       0x78 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(cortex_handlers.c.o)
+ .debug_frame   0x00001348       0x78 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(delay.c.o)
+ .debug_frame   0x000013c0       0x40 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(hooks.c.o)
+ .debug_frame   0x00001400       0x38 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(main.cpp.o)
+ .debug_frame   0x00001438       0x70 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(new.cpp.o)
+ .debug_frame   0x000014a8       0x2c C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(startup.c.o)
+ .debug_frame   0x000014d4       0x28 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring.c.o)
+ .debug_frame   0x000014fc       0x80 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring_analog.c.o)
+ .debug_frame   0x0000157c       0x60 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring_digital.c.o)
+ .debug_frame   0x000015dc       0x2c C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(wiring_private.c.o)
+ .debug_frame   0x00001608       0x48 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Reset.cpp.o)
+ .debug_frame   0x00001650       0xc8 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(PluggableUSB.cpp.o)
+ .debug_frame   0x00001718       0x48 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(SAMD21_USBDevice.cpp.o)
+ .debug_frame   0x00001760       0x20 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp\libgcc.a(_udivsi3.o)
+ .debug_frame   0x00001780       0x34 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp\libgcc.a(_muldi3.o)
+ .debug_frame   0x000017b4       0x3c c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp\libgcc.a(_udivmoddi4.o)
+ .debug_frame   0x000017f0       0x2c c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-init.o)
+ .debug_frame   0x0000181c       0x40 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-malloc.o)
+ .debug_frame   0x0000185c       0x2c c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-memcmp.o)
+ .debug_frame   0x00001888       0x28 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-memcpy-stub.o)
+ .debug_frame   0x000018b0       0x20 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-memset.o)
+ .debug_frame   0x000018d0       0x2c c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-nano-freer.o)
+ .debug_frame   0x000018fc       0x30 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-nano-mallocr.o)
+ .debug_frame   0x0000192c       0x2c c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-sbrkr.o)
+ .debug_frame   0x00001958       0x40 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-mlock.o)
+ .debug_frame   0x00001998       0x48 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-reent.o)
+ .debug_frame   0x000019e0       0xb0 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-lock.o)
+ .debug_frame   0x00001a90       0x20 c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libnosys.a(sbrk.o)
 
 Cross Reference Table
 
@@ -2217,8 +2220,8 @@ USB_SetHandler                                    C:\Users\baliy\AppData\Local\a
 Uart::IrqHandler()                                C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Uart.cpp.o)
                                                   C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\core\variant.cpp.o
 Uart::Uart(SERCOM*, unsigned char, unsigned char, SercomRXPad, SercomUartTXPad) C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Uart.cpp.o)
-                                                  C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\core\variant.cpp.o
 Uart::Uart(SERCOM*, unsigned char, unsigned char, SercomRXPad, SercomUartTXPad) C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Uart.cpp.o)
+                                                  C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\core\variant.cpp.o
 Uart::Uart(SERCOM*, unsigned char, unsigned char, SercomRXPad, SercomUartTXPad, unsigned char, unsigned char) C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Uart.cpp.o)
 Uart::Uart(SERCOM*, unsigned char, unsigned char, SercomRXPad, SercomUartTXPad, unsigned char, unsigned char) C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Uart.cpp.o)
 Uart::available()                                 C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(Uart.cpp.o)
@@ -2554,6 +2557,7 @@ tickReset                                         C:\Users\baliy\AppData\Local\a
                                                   C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(delay.c.o)
 timing_lengths                                    C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_core.c.o
 timing_run                                        C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_core.c.o
+timing_run_off                                    C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_core.c.o
                                                   C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7\sketch\timing_bench_feather.ino.cpp.o
 usbd                                              C:\Users\baliy\AppData\Local\arduino\sketches\E499F896CDCB5FA17BCEF478F226ECB7/..\..\cores\fc000d70e3e9c64320d487869d2af04a\core.a(USBCore.cpp.o)
 vsniprintf                                        c:/users/baliy/appdata/local/arduino15/packages/adafruit/tools/arm-none-eabi-gcc/9-2019q4/bin/../lib/gcc/arm-none-eabi/9.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libc_nano.a(lib_a-vsnprintf.o)

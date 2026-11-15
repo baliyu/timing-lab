@@ -38,7 +38,7 @@ Two earlier guesses were wrong and were corrected before the run, both because I
 
 ## What it does not show
 
-One board, one compiler, one set of aligned buffers: with an unaligned pointer this `memcmp` takes its byte loop, and I have not run that. Interrupts were masked and nothing else was running, which is why there is no noise at all; a real attacker faces whatever noise sits between them and the comparison.
+One board, one compiler, one set of aligned buffers: with an unaligned pointer this `memcmp` takes its byte loop; I ran that afterwards, see the section on unaligned buffers at the end. Interrupts were masked and nothing else was running, which is why there is no noise at all; a real attacker faces whatever noise sits between them and the comparison.
 A 4-byte tag leaks 0.375 microseconds here, and I have not argued whether that could be used from a radio (my argument is in the predictions, and it is an argument, not a measurement). Nothing here says whether the leak of `memcmp` in the bootloader matters: it compares a public value.
 
 ## Adafruit Feather M0 (Cortex-M0+)
@@ -85,7 +85,44 @@ The same source line, `memcmp(a, b, n)`, leaks differently on each board, becaus
 
 ## What it does not show
 
-One board of each kind, one compiler each, buffers aligned to four bytes (an unaligned pointer sends the Nano's `memcmp` to its byte loop, and I have not run that), interrupts masked and nothing else running, which is why there is almost no noise.
+One board of each kind, one compiler each, buffers aligned to four bytes (an unaligned pointer sends the Nano's `memcmp` to its byte loop; the unaligned run is in the last section), interrupts masked and nothing else running, which is why there is almost no noise.
 A real attacker faces whatever noise sits between them and the comparison, and I have not argued from these numbers that a leak of this size could be used over a radio. The first Nano capture and the first Feather capture are one capture each (five runs each, identical apart from the one-cycle variation noted above).
 I did not measure the STM32L072, other compiler versions or optimisation levels, or the effect of interrupts being enabled.
 
+
+## Unaligned buffers (14 and 15 November 2026)
+
+Question: does the cost of the library `memcmp` depend on whether the two pointers are 4-byte aligned? In the real Nano build it ORs the two pointers, tests the low two bits and takes a byte loop if either is set (`asm/nano_real.lst`). In the real Feather build it is a byte loop with no such test (`asm/feather_real.lst`). P9 and P10 and their reasons were committed before any run (Revisions 4 and 5 in `docs/PREDICTIONS.md`).
+
+Method: both comparison buffers moved up by one byte (`TIMING_OFFSET 1`, logged as `ENV offset_bytes 1`), against a control run of the same build at offset 0, five complete runs each. Logs: `bench/logs/nano_off0_control.log`, `nano_off1.log`, `feather_off0_control.log`, `feather_off1.log`. Before the runs I checked that `memcmp` in each rebuilt program is the same instructions as in the listings (Nano before flashing; Feather after the upload but before any measurement, because I uploaded before exporting).
+
+| # | Predicted | Measured | Verdict |
+|---|---|---|---|
+| P9 | Nano, offset 1: `memcmp` slope 8 to 11 cycles per matching byte for n = 4, 16 and 32; spread 24 to 33 / 120 to 165 / 248 to 341; no four-byte steps; the n = 32 spread not below 200 | slope 8.00 / 8.00 / 8.00; spread 24 / 120 / 248; no steps | hit on slope, spread and steps |
+| P9 (one clause) | the mean at position p + 4 is 32 to 44 cycles above the mean at p | not measured separately; the constant slope of 8.00 implies 32, the bottom of the range | not scored |
+| P10 | Feather, offset 1: every mean cycle count within 2 cycles of the control, position by position | largest difference 3.00 cycles (n = 32, p = 8), mean difference -2.78 | miss, by 1 cycle |
+| both boards | no wrong answers | 0 on every log (T lines: Nano 877 and 847, Feather 825 and 825) | hit |
+
+![Nano, library memcmp, aligned against offset 1](../figures/nano_memcmp_alignment.png)
+
+![Feather, library memcmp, aligned against offset 1](../figures/feather_memcmp_alignment.png)
+
+What it shows:
+
+- On the Nano, an unaligned `memcmp` costs 8 cycles per byte, the same as the early-exit loop. Aligned it is a sawtooth that averages 2.8 to 3.1 cycles per byte at n = 16 and 32. For a 32-byte digest, first byte wrong against last byte wrong differs by 248 cycles unaligned (3.9 microseconds at the measured 63.99 MHz) and 101 aligned (1.6 microseconds). The all-equal case costs 326 cycles unaligned against 156 aligned, 170 more (2.7 microseconds).
+- On the Nano, `cmp_naive` and `cmp_ct` did not change between offset 0 and 1 (largest difference 0.00 cycles).
+- On the Feather, alignment makes no visible difference to the shape (a straight line at 11 cycles per byte in both). The offset 1 build was 1 to 3 cycles faster in all three functions, including `cmp_ct`, whose code is identical in both builds (mean differences -1.00 for `cmp_naive`, -2.00 for `cmp_ct`, -2.78 for `cmp_memcmp`). That looks like a build-wide shift and not an alignment effect, but I did not test why.
+- A comparison of a public digest, as in the bootloader, does not need constant time, so this does not change the conclusion above. It does show that the leak of the library `memcmp` depends on where the buffers sit.
+
+Limits:
+
+- One offset (1) on both pointers. One pointer offset was not run, because the Nano listing tests the OR of both. Offsets 2 and 3 were not run.
+- One board of each kind, one build each. The rebuilt Nano control was 9 cycles faster than the October run at every position and for every function, with identical slopes and spreads; I did not find the cause. The Feather offset 1 build was 1 to 3 cycles faster than its control; cause not found.
+- I expected the two Nano binaries (offset 0 and 1) to differ in 1 to 20 bytes and they differ in 89. I did not investigate.
+- I uploaded the Feather sketch before exporting it and read its listing afterwards, so the code check came after the upload, still before any measurement.
+- Interrupts masked, nothing else running; no noise to speak of.
+
+Reproduce (the comparison and the figures):
+
+    PYTHONPATH=python python -m timing_lab.align_compare bench/logs/nano_off0_control.log bench/logs/nano_off1.log --labels "offset 0 (aligned)" "offset 1" --title "Nano 33 BLE, library memcmp" --png figures/nano_memcmp_alignment.png
+    PYTHONPATH=python python -m timing_lab.align_compare bench/logs/feather_off0_control.log bench/logs/feather_off1.log --labels "offset 0 (aligned)" "offset 1" --title "Feather M0, library memcmp" --png figures/feather_memcmp_alignment.png
